@@ -1,0 +1,287 @@
+<p style="font-size: 1em;"><table summary="Document Header" class="head" width="100%">
+    <col width="30%">
+    <col width="30%">
+    <col width="30%">
+    <tbody>
+        <tr>
+            <td class="head-ltitle">
+                HEXEDIT(1)</td>
+            <td class="head-vol" align="center">
+                General Commands Manual</td>
+            <td class="head-rtitle" align="right">
+                HEXEDIT(1)</td>
+        </tr>
+    </tbody>
+</table>
+<div class="section">
+    <h1>NAME</h1> hexedit &#45; view and edit files in hexadecimal or in ASCII
+</div>
+<div class="section">
+    <h1>SYNOPSIS</h1> <i>hexedit</i> [&#45;s | &#45;&#45;sector] [&#45;m | &#45;&#45;maximize] [&#45;h | &#45;&#45;help]
+    [filename] [--color]
+</div>
+<div class="section">
+    <h1>DESCRIPTION</h1> <i>hexedit</i> shows a file both in ASCII and in hexadecimal. The file can be a device as the
+    file is read a piece at a time. You can modify the file and search through it.
+</div>
+<div class="section">
+    <h1>OPTIONS</h1>
+    <dl>
+        <dt>
+            <i>&#45;s, &#45;&#45;sector</i>
+        </dt>
+        <dd>
+            Format the display to have entire sectors.</dd>
+    </dl>
+    <dl>
+        <dt>
+            <i>&#45;m, &#45;&#45;maximize</i>
+        </dt>
+        <dd>
+            Try to maximize the display.</dd>
+    </dl>
+    <dl>
+        <dt>
+            <i>&#45;h, &#45;&#45;help</i>
+        </dt>
+        <dd>
+            Show the usage.</dd>
+    </dl>
+</div>
+<div class="section">
+    <h1>COMMANDS (quickly)</h1>
+    <div class="subsection">
+        <h2>Moving</h2><br>
+        &lt;, &gt; : go to start/end of the file<br>
+        Right: next character<br>
+        Left: previous character<br>
+        Down: next line<br>
+        Up: previous line<br>
+        Home: beginning of line<br>
+        End: end of line<br>
+        PUp: page forward<br>
+        PDown: page backward<br>
+    </div>
+    <div class="subsection">
+        <h2>Miscellaneous</h2><br>
+        F2: save<br>
+        F3: load file<br>
+        F1: help<br>
+        Ctrl-L: redraw<br>
+        Ctrl-X: save and exit<br>
+        Ctrl-C: exit without saving
+            <br>
+            Tab: toggle hex/ascii<br>
+            Return: go to<br>
+            Backspace: undo previous character<br>
+            Ctrl-U: undo all<br>
+            Ctrl-S: search forward<br>
+            Ctrl-R: search backward<br>
+    </div>
+    <div class="subsection">
+        <h2>Cut&amp;Paste</h2><br>
+        Ctrl-Space: set mark<br>
+        Esc-W: copy<br>
+        Ctrl-Y: paste<br>
+        Esc-Y: paste into a file<br>
+        Esc-I: fill<br>
+    </div>
+</div>
+<div class="section">
+    <h1>COMMANDS (full and detailed)</h1> o <i>Right-Arrow</i>, <i>Left-Arrow</i>, <i>Down-Arrow</i>, <i>Up-Arrow</i>
+    &#45; move the cursor.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+F</i>, <i>Ctrl+B</i>, <i>Ctrl+N</i>, <i>Ctrl+P</i> &#45; move the cursor.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+Right-Arrow</i>, <i>Ctrl+Left-Arrow</i>, <i>Ctrl+Down-Arrow</i>, <i>Ctrl+Up-Arrow</i> &#45; move n times
+    the cursor.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+Right-Arrow</i>, <i>Esc+Left-Arrow</i>, <i>Esc+Down-Arrow</i>, <i>Esc+Up-Arrow</i> &#45; move n times the
+    cursor.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+F</i>, <i>Esc+B</i>, <i>Esc+N</i>, <i>Esc+P</i> &#45; move n times the cursor.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Home</i>, <i>Ctrl+A</i> &#45; go the beginning of the line.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>End</i>, <i>Ctrl+E</i> &#45; go to the end of the line.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Page up</i>, <i>Esc+V</i>, <i>F5</i> &#45; go up in the file by one page.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Page down</i>, <i>Ctrl+V</i>, <i>F6</i> &#45; go down in the file by one page.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>&lt;</i>, <i>Esc+&lt;</i>, <i>Esc+Home</i> &#45; go to the beginning of the file.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>&gt;</i>, <i>Esc+&gt;</i>, <i>Esc+End</i> &#45; go to the end of the file (for regular files that have a size).
+    <div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+U</i>, <i>Ctrl+_</i>, <i>Ctrl+/</i> &#45; undo all (forget the modifications).<div
+        style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+Q</i> &#45; read next input character and insert it (this is useful for inserting control characters and
+    bound keys).<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Tab</i>, <i>Ctrl+T</i> &#45; toggle between ASCII and hexadecimal.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>/</i>, <i>Ctrl+S</i> &#45; search forward (in ASCII or in hexadecimal, use <i>TAB</i> to change).<div
+        style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+R</i> &#45; search backward.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+G</i>, <i>F4</i> &#45; go to a position in the file.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Return</i> &#45; go to a sector in the file if <i>&#45;&#45;sector</i> is used, otherwise go to a position in
+    the file.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+L</i> &#45; display the page starting at the current cursor position.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>F2</i>, <i>Ctrl+W</i> &#45; save the modifications.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>F1</i>, <i>Esc+H</i> &#45; help (show the man page).<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+O</i>, <i>F3</i> &#45; open another file<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+L</i> &#45; redisplay (refresh) the display (usefull when your terminal screws up).<div
+        style="height: 0.00em;">
+        &#160;</div>
+    o <i>Backspace</i>, <i>Ctrl+H</i> &#45; undo the modifications made on the previous byte.<div
+        style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+Ctrl+H</i> &#45; undo the modifications made on the previous bytes.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+Space</i>, <i>F9</i> &#45; set mark where cursor is.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+W</i>, <i>Delete</i>, <i>F7</i> &#45; copy selected region.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+Y</i>, <i>Insert</i>, <i>F8</i> &#45; paste (yank) previously copied region.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+Y</i>, <i>F11</i> &#45; save previously copied region to a file.<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+I</i>, <i>F12</i> &#45; fill the selection with a string<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Esc+T</i> &#45; truncate the file at the current location<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>Ctrl+C</i> &#45; unconditional quit (without saving).<div style="height: 0.00em;">
+        &#160;</div>
+    o <i>F10</i>, <i>Ctrl+X</i> &#45; quit.<p>
+        For the <i>Esc</i> commands, it sometimes works to use <i>Alt</i> instead of <i>Esc</i>. Funny things here
+        (especially for froggies :) egrave = Alt+H , ccedilla = Alt+G, Alt+Y = ugrave.
+    <div style="height: 0.00em;">
+        &#160;</div>
+    <div class="subsection">
+        <h2>Modeline</h2> At the bottom of the display you have the modeline (copied from emacs). As in emacs, you have
+        the indications --, ** and %% meaning unmodified, modified and read-only. Then you have the name of the file
+        you're currently editing. Next to it is the current position of the cursor in the file followed by the total
+        file size. The total file size isn't quite correct for devices.<div style="height: 0.00em;">
+            &#160;</div>
+        While in --sector mode, it shows the sector the cursor is in.
+    </div>
+    <div class="subsection">
+        <h2>Editing</h2> You can edit in ASCII or in hexadecimal. You can switch between the two with <i>Tab</i>. When
+        the file is read-only, you can't edit it. When trying to edit a read-only file, a message (``File is
+        read-only'') tells you it is non-writable.<div style="height: 0.00em;">
+            &#160;</div>
+        The modifications are shown in bold until they are saved. The modeline indicates whether you have modified the
+        file or not.<div style="height: 0.00em;">
+            &#160;</div>
+        When editing in hexadecimal, only <i>0</i>,<i>1</i>,...,<i>9</i>, <i>a</i>,<i>b</i>,...,<i>f</i>,
+        <i>A</i>,<i>B</i>,...<i>F</i> are legal. Other keys are unbound. The first time you hit an unbound key, the help
+        pops up. It won't pop again unless you call the help directly (with <i>F1</i>).<div style="height: 0.00em;">
+            &#160;</div>
+        When editing in ascii, you can find it difficult to enter characters like <i>/</i> which are bound to a
+        function. The solution is to use the quoted insert function <i>Ctrl+Q</i>, the key after the quoted insert
+        function is not processed by <i>hexedit</i> (like emacs' quoted-insert, or like the \ character in C).
+    </div>
+    <div class="subsection">
+        <h2>Searching</h2> You can search for a string in ASCII or in hexadecimal. You can switch between the two with
+        <i>Tab</i>. If the string is found, the cursor is moved to the beginning of the matching location. If the search
+        failed, a message (``not found'') tells you so. You can cancel the search by pressing a key.<div
+            style="height: 0.00em;">
+            &#160;</div>
+        The search in hexadecimal is a bit confusing. You must give a hexadecimal string with an even number of
+        characters. The search can then be done byte by byte. If you want to search a long number (eg: a 32 bit number),
+        you must know the internal representation of that number (little/big endian problem) and give it the way it is
+        in memory. For example, on an Intel processor (little endian), you must swap every bytes: 0x12345678 is written
+        0x78563412 in memory and that's the string you must give to the search engine.<div style="height: 0.00em;">
+            &#160;</div>
+        Before searching you are asked if you want to save the changes, if the file is edited.
+            For more sophisticated search, see Volker Schatz's patch at <a
+                href="http://www.volkerschatz.com/unix/homebrew.html#hexedit">&lt;http://www.volkerschatz.com/unix/homebrew.html#hexedit&gt;</a>.
+    </div>
+    <div class="subsection">
+        <h2>Selecting, copying, pasting, filling</h2> First, select the part of the buffer you want to copy: start
+        setting the mark where you want. Then go to the end of the area you want to copy (you can use the go to function
+        and the search functions). Then copy it. You can then paste the copied area in the current file or in another
+        file.<p>
+            You can also fill the selected area with a string or a character: start choosing the block you want to fill
+            in (set mark then move to the end of the block), and call the fill function ( <i>F12</i>). <i>hexedit</i>
+            ask you the string you want to fill the block with.
+        <div style="height: 0.00em;">
+            &#160;</div>
+        The code is not tuned for huge filling as it keeps the modifications in memory until you save them. That's why
+        <i>hexedit</i> will warn you if you try to fill in a big block.<p>
+            When the mark is set, the selection is shown in reverse mode.
+        <div style="height: 0.00em;">
+            &#160;</div>
+        Be aware that the copied area contains the modifications done at the time of the copy. But if you undo the
+        modifications, it does not change the content of the copy buffer. It seems obvious but it's worth saying.
+    </div>
+    <div class="subsection">
+        <h2>Scrolling</h2> The scrolling is different whether you are in <i>&#45;&#45;sector</i> mode or not. In normal
+        mode, the scrolling is line by line. In sector mode, the scrolling is sector by sector. In both modes, you can
+        force the display to start at a given position using <i>Esc+L</i>.
+    </div>
+</div>
+<div class="section">
+    <h1>SEE ALSO</h1> od(1), hdump(1), hexdump(1), bpe(1), hexed(1), beav(1).
+</div>
+<div class="section">
+    <h1>AUTHOR</h1> Pixel (Pascal Rigaux) <a href="mailto:pixel@rigaux.org">&lt;pixel@rigaux.org&gt;</a>,<div
+        style="height: 0.00em;">
+        &#160;</div>
+    Home page is <a href="http://rigaux.org/">&lt;http://rigaux.org/&gt;</a>.
+</div>
+<div class="section">
+    <h1>UNRESTRICTIONS</h1> <i>hexedit</i> is Open Source; anyone may redistribute copies of <i>hexedit</i> to anyone
+    under the terms stated in the GNU General Public License.<p>
+        You can find <i>hexedit</i> at
+    <div style="height: 0.00em;">
+        &#160;</div>
+    <a href="http://rigaux.org/hexedit-1.2.13.src.tgz">&lt;http://rigaux.org/hexedit-1.2.13.src.tgz&gt;</a> and<div
+        style="height: 0.00em;">
+        &#160;</div>
+    <a
+        href="http://rigaux.org/hexedit-1.2.13.bin.i386.dynamic.tgz">&lt;http://rigaux.org/hexedit-1.2.13.bin.i386.dynamic.tgz&gt;</a>.
+</div>
+<div class="section">
+    <h1>TODO</h1> Anything you think could be nice...
+</div>
+<div class="section">
+    <h1>LIMITATIONS</h1> There are problems with the curses library given with Redhat 5.0 that make <i>hexedit</i> think
+    the terminal is huge. The result is that hexedit is not usable.<p>
+        The shortcuts work on some machines, and not on others. That's why there are many shortcuts for each function.
+        The Ctrl+Arrows and the Alt+. do not work work as they should most of the time. On SUNs, you must do
+        Ctrl+V-Ctrl+V instead of Ctrl+V (!); and the Alt key is the diamond one.
+    <p>
+        While searching, it could be interesting to know which position the search has reached. It's always nice to see
+        something moving to help waiting.
+    <p>
+        The hexadecimal search could be able to search modulo 4 bits instead of 8 bits. Another feature could be to
+        complete padd odd length hexadecimal searches with zeros.
+</div>
+<div class="section">
+    <h1>BUGS</h1> I have an example where the display is completly screwed up. It seems to be a bug in ncurses (or maybe
+    in xterm and rxvt)?? Don't know if it's me using ncurses badly or not... It seems to happen when <i>hexedit</i>
+    leaves only one space at the end of the lines... If anyone has a (or the) solution, please tell me!<p>
+        If you have any problem with the program (even a small one), please do report it to me. Remarks of any kind are
+        also welcome.
+</div>
+<table summary="Document Footer" class="foot" width="100%">
+    <col width="50%">
+    <col width="50%">
+    <tr>
+        <td class="foot-date">
+            12 July 1998</td>
+        <td class="foot-os" align="right">
+        </td>
+    </tr>
+</table></p>

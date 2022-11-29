@@ -1,0 +1,37 @@
+<p style="font-size: 1em;">
+	Microsoft Windows 7 does not natively support the Prolific PL27a1 chip-set. An appropriate driver can be installed
+	via <a title="PL27a1-Win7.zip" target="_blank"
+		href="https://onedrive.live.com/?authkey=%21AF0h%2DVki6KuoVI0&cid=E9007B3DCB876578&id=E9007B3DCB876578%21129&parId=E9007B3DCB876578%21128&action=locate">PL27a1-Win7.zip</a>.
+	<br><br>
+	<i>winterCUB</i> using the Windows VirtDisk API to mount each pseudo file as a physical drive.
+	<br><br>
+	<i>winterCUB</i> utilises the software interface <a title="FUSE" target="_blank"
+		href="https://github.com/libfuse/libfuse#libfuse">Filesystem in User-space</a> (FUSE) for Unix-like Operating
+	Systems. In order to use <i>winterCUB</i>, <a title="WinFsp" target="_blank"
+		href="http://www.secfs.net/winfsp">Windows File System Proxy</a> (WinFsp) must be installed.
+	<br><br>
+	<i>winterCUB</i> requires Administrator privileges and launches as a persistent application (controlled via the
+	System Tray).<br><br>
+	<img style="max-width: 495px; float: left; padding: 10px;" src="winfsp.png">
+	To install WinFsp, execute the <i>winfsp-x.x-xxx.msi</i> installer and follow the prompts. Only the <i>Core</i>
+	feature must be selected (the <i>Developer</i> and <i>FUSE for Cygwin</i> options are not necessary). The installer
+	can be downloaded from <a title="WinFsp" href="http://www.secfs.net/winfsp/rel/" target="_blank">here</a>.<br
+		clear="all">
+<h3>Control Panel</h3>
+A Control Panel is accessible via the context-menu of the <i>winterCUB</i> icon found on the System Tray.</p>
+<img style="max-width: 435px;" src="controlPanel.png"><p style="font-size: 1em;">
+The panel displays information about the attached computer and a list of attached devices. If the host is <i>nanoq</i>, mountable volumes are listed for each attached device (right-click to
+mount/unmount).
+<br><br>
+Three action buttons are provided:
+<br><br>
+<h3>Open Folder</h3>
+Opens the folder containing the pseudo folder presenting the attached block devices for the particular WET cable.
+<br><br>
+<h3>Connect/Disconnect</h3>
+Connect/disconnect to/from the attached computer the the particular WET cable.
+<br><br>
+<h3>Open/Close Console</h3>
+Open/close a console which represents the <i>arcticBear</i> host application as seen on the host computer. The console
+provides a user interface to the host application (not applicable when <i>nanoq</i> is the host).
+</p>

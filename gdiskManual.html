@@ -1,0 +1,153 @@
+<p style="font-size: 1em;"><table summary="Document Header" class="head" width="100%">
+    <col width="30%">
+    <col width="30%">
+    <col width="30%">
+    <tbody>
+        <tr>
+            <td class="head-ltitle">
+                GDISK</td>
+            <td class="head-vol" align="center">
+                User Commands</td>
+            <td class="head-rtitle" align="right">
+                GDISK)</td>
+        </tr>
+    </tbody>
+</table>
+
+<h1>Name</h1>
+
+<p>gdisk - Interactive GUID partition table (GPT) manipulator
+<h1>Synopsis</h1>
+
+<p><b>gdisk</b> [ -s sector_size ] <i>device_file</i>
+<h1>Description</h1>
+
+
+<p>GPT fdisk (aka <b>gdisk</b>) is a text-mode menu-driven program for creation and manipulation of partition tables. It
+    will automatically convert an
+    old-style Master Boot Record (MBR) partition table or BSD disklabel stored without an MBR carrier partition to the
+    newer Globally Unique Identifier (GUID)
+    Partition Table (GPT) format, or will load a GUID partition table. When used with the <i>-l</i> command-line option,
+    the program displays the current partition
+    table and then exits.
+<p>GPT fdisk operates mainly on the GPT headers and partition tables; however, it can and will generate a fresh
+    protective MBR, when required. (Any boot loader
+    code in the protective MBR will not be disturbed.) If you've created an unusual protective MBR, such as a hybrid MBR
+    created by <b>gptsync</b> or
+    <b>gdisk</b>'s own hybrid MBR creation feature, this should not be disturbed by most ordinary actions. Some advanced
+    data recovery options require you to
+    understand the distinctions between the main and backup data, as well as between the GPT headers and the partition
+    tables. For information on MBR vs. GPT, as
+    well as GPT terminology and structure, see the extended <b>gdisk</b> documentation at <a
+        href="http://www.rodsbooks.com/gdisk/">http://www.rodsbooks.com/gdisk/</a> or consult Wikipedia.
+
+<p>The <b>gdisk</b> program employs a user interface similar to that of Linux's <b>fdisk</b>, but <b>gdisk</b> modifies
+    GPT partitions. It also has the
+    capability of transforming MBR partitions or BSD disklabels into GPT partitions. Like the original <b>fdisk</b>
+    program, <b>gdisk</b> does not modify disk
+    structures until you explicitly write them to disk, so if you make a mistake, you can exit from the program with the
+    'q' option to leave your partitions
+    unmodified.
+<p>Ordinarily, <b>gdisk</b> operates on disk device files, such as <i>/dev/sda</i> or <i>/dev/hda</i> under Linux,
+    <i>/dev/disk0</i> under Mac OS X, <i>\\.\physicaldrive0</i> under Windows, or
+    <i>/dev/ad0</i> or <i>/dev/da0</i> under FreeBSD. The program can also operate on disk image files, which can be
+    either copies of whole disks (made with
+    <b>dd</b>, for instance) or raw disk images used by emulators such as QEMU or VMWare. Note that only <i>raw</i> disk
+    images are supported; <b>gdisk</b> cannot
+    work on compressed or other advanced disk image formats.
+<p>The MBR partitioning system uses a combination of cylinder/head/sector (CHS) addressing and logical block addressing
+    (LBA). The former is klunky and
+    limiting. GPT drops CHS addressing and uses 64-bit LBA mode exclusively. Thus, GPT data structures, and therefore
+    <b>gdisk</b>, do not need to deal with CHS
+    geometries and all the problems they create. Users of <b>fdisk</b> will note that <b>gdisk</b> lacks the options and
+    limitations associated with CHS
+    geometries.
+<p>For best results, you should use an OS-specific partition table program whenever possible. For example, you should
+    make Mac OS X partitions with the Mac OS
+    X Disk Utility program and Linux partitions with the Linux <b>gdisk</b> or GNU Parted program.
+<p>Upon start, <b>gdisk</b> attempts to identify the partition type in use on the disk. If it finds valid GPT data,
+    <b>gdisk</b> will use it. If <b>gdisk</b>
+    finds a valid MBR or BSD disklabel but no GPT data, it will attempt to convert the MBR or disklabel into GPT form.
+    (BSD disklabels are likely to have unusable
+    first and/or final partitions because they overlap with the GPT data structures, though.) GPT fdisk can identify,
+    but not use data in, Apple Partition Map
+    (APM) disks, which are used on 680x0- and PowerPC-based Macintoshes.
+<p>Some OSes' GPT utilities create some blank space (typically 128 MiB) after each partition. The intent is to enable
+    future disk utilities to use this space.
+    Such free space is not required of GPT disks, but creating it may help in future disk maintenance. You can use GPT
+    fdisk's relative partition positioning
+    option (specifying the starting sector as '+128M', for instance) to simplify creating such gaps.
+    </dl>
+<h2>Options</h2>
+<dl compact>
+    <b>i</b>
+
+        <p>Show detailed partition information. The summary information produced by the 'p' command necessarily omits
+            many details, such as the partition's unique GUID
+            and the translation of <b>gdisk</b>'s internal partition type code to a plain type name. The 'i' option
+            displays this information for a single partition.
+
+        <p><b>l</b>
+
+        <p>Display a summary of partition types. GPT uses a GUID to identify partition types for particular OSes and
+            purposes. For ease of data entry, <b>gdisk</b>
+            compresses these into two-byte (four-digit hexadecimal) values that are related to their equivalent MBR
+            codes. Specifically, the MBR code is multiplied by
+            hexadecimal 0x0100. For instance, the code for Linux swap space in MBR is 0x82, and it's 0x8200 in
+            <b>gdisk</b>. A one-to-one correspondence is impossible,
+            though. Most notably, the codes for all varieties of FAT and NTFS partition correspond to a single GPT code
+            (entered as 0x0700 in <b>sgdisk</b>). Some OSes use
+            a single MBR code but employ many more codes in GPT. For these, <b>gdisk</b> adds code numbers sequentially,
+            such as 0xa500 for a FreeBSD disklabel, 0xa501 for
+            FreeBSD boot, 0xa502 for FreeBSD swap, and so on. Note that these two-byte codes are unique to <b>gdisk</b>.
+
+        <p><b>p</b>
+
+        <p>Display basic partition summary data. This includes partition numbers, starting and ending sector numbers,
+            partition sizes, <b>gdisk</b>'s partition types
+            codes, and partition names. For additional information, use the 'i' command.
+
+        <p><b>q</b>
+
+        <p>Quit from the program <i>without saving your changes</i>. Use this option if you just wanted to view
+            information or if you make a mistake and want to back
+            out of all your changes.
+
+        <p><b>v</b>
+
+        <p>Verify disk. This option checks for a variety of problems, such as incorrect CRCs and mismatched main and
+            backup data. This option does not automatically
+            correct most problems, though; for that, you must use options on the recovery &amp; transformation menu. If
+            no problems are found, this command displays a
+            summary of unallocated disk space.
+
+        <p><b>?</b>
+
+        Print the menu. Type this command (or any other unrecognized command) to see a summary of available options.
+    The second <b>gdisk</b> menu is the recovery &amp; transformation menu, which provides access to data recovery
+        options and features related to the
+        transformation of partitions between partitioning schemes (converting BSD disklabels into GPT partitions or
+        creating hybrid MBRs, for instance). A few options
+        on this menu duplicate functionality on the main menu, for the sake of convenience. The options on this menu
+        are:
+</dl>
+<h1>Authors</h1>
+
+<p>Primary author: Roderick W. Smith (<a href="mailto:rodsmith@rodsbooks.com">rodsmith@rodsbooks.com</a>)
+<p>Contributors:
+<p>* Yves Blusseau (<a href="mailto:1otnwmz02@sneakemail.com">1otnwmz02@sneakemail.com</a>)
+<p>* David Hubbard (<a href="mailto:david.c.hubbard@gmail.com">david.c.hubbard@gmail.com</a>)
+<p>* Justin Maggard (<a href="mailto:justin.maggard@netgear.com">justin.maggard@netgear.com</a>)
+<p>* Dwight Schauer (<a href="mailto:dschauer@ti.com">dschauer@ti.com</a>)
+<p>* Florian Zumbiehl (<a href="mailto:florz@florz.de">florz@florz.de</a>)
+<h1>See Also</h1>
+
+<p><b>cfdisk (8)</b>, <b>cgdisk (8)</b>, <b>fdisk (8)</b>, <b>mkfs (8)</b>, <b>parted (8)</b>, <b>sfdisk (8) sgdisk (8)
+        fixparts (8)</b>
+<p><a href="http://en.wikipedia.org/wiki/GUID_Partition_Table">http://en.wikipedia.org/wiki/GUID_Partition_Table</a>
+<p><a
+        href="http://developer.apple.com/technotes/tn2006/tn2166.html">http://developer.apple.com/technotes/tn2006/tn2166.html</a>
+<p><a href="http://www.rodsbooks.com/gdisk/">http://www.rodsbooks.com/gdisk/</a>
+<h1>Availability</h1>
+
+<p>The <b>gdisk</b> command is part of the <i>GPT fdisk</i> package and is available from Rod Smith.</p>

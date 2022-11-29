@@ -1,0 +1,97 @@
+          <p style="text-align: justify; font-size: 1em;">As of Windows 7, Taskbar Extensions
+            have included Jump Lists.&nbsp; A <a target="_blank" title="Jump List"
+
+              href="https://docs.microsoft.com/en-us/windows/win32/shell/taskbar-extensions#jump-lists">Jump
+              List</a> is a system-provided menu that appears when the user
+            right-clicks a program in the Taskbar or on the Start menu.&nbsp; It
+            is used to provide quick access to recently or frequently used
+            documents and offer direct links to application functionality.</p>
+          <p style="text-align: justify; font-size: 1em;">Jump Lists are used to manage <a target="_blank"
+
+              title="Jump List" href="https://docs.microsoft.com/en-us/windows/win32/shell/taskbar-extensions#destinations">Destinations</a>,
+            such as recent or frequently used files and folders.&nbsp; Two
+            category of Destinations are defined, <i>Automatic and Custom</i>.</p>
+          <h3 style=" text-align: justify;">File Type Associations and
+            Application User Model IDs</h3>
+          <p style="text-align: justify; font-size: 1em;">The Windows Registry manages file
+            types by employing Programmatic Identifiers (<a target="_blank" title="Jump List"
+
+              href="https://docs.microsoft.com/en-us/windows/win32/shell/fa-progids">ProgID</a>)
+            to associate Registry <a target="_blank" title="Jump List" href="https://docs.microsoft.com/en-us/windows/win32/com/-progid--key">sub-keys</a>
+            with applications.</p>
+          <p style="text-align: justify; font-size: 1em;">Applications can declare an explicit
+            Application User Model Identifier (<a target="_blank" title="Jump List"
+
+              href="https://docs.microsoft.com/en-us/windows/win32/shell/appids">AppUserModelID</a>)
+            to uniquely identify it within a particular system.&nbsp; Such a
+            declaration is optional.&nbsp; If an application does not use an
+            explicit <i>AppUserModelID</i>, the Windows Shell automatically
+            generates an (implicit) identifier for that application.&nbsp; Links
+            for file types associated with these applications are managed by <i>Windows
+              Explorer</i> and are referred to as Destinations.</p>
+          <h3>AppID Calculation</h3>
+          <p style="text-align: justify; font-size: 1em;">Jump Lists rely on a 64-bit integer <i>Application
+              Identifier</i> (AppID) to uniquely identify applications.&nbsp;
+            The <i>AppID</i> is the result of a calculated 64-bit Cyclic
+            Redundancy Check (CRC) of text which uniquely represents the
+            application for the particular installation.</p>
+          <p style="text-align: justify; font-size: 1em;">This text must be an uppercase, UTF-16
+            string and can be derived from a number of sources:</p>
+          <ol>
+            <li>
+              <p style="text-align: justify; font-size: 1em;">Fully qualified file path of the application.&nbsp; For
+                example, the <i>Strawberry Perl</i> interpreter installed at
+                "C:\STRAWBERRY\PERL\BIN\PERL.EXE" has the <i>AppID</i>
+                0x1f5c8aa37e9ae027</p>
+            </li>
+            <li>
+              <p style="text-align: justify; font-size: 1em;">Fully qualified 8.3 file path of the application.&nbsp; For
+                example, the older WordViewer application installed at
+                "C:\PROGRA~2\MICROS~1\OFFICE11\WORDVIEW.EXE" has the <i>AppID</i>
+                0xb1f0d9a9cd4b3dde.</p>
+            </li>
+            <li>
+              <p style="text-align: justify; font-size: 1em;">Fully qualified, contracted file
+                path canonicalised using <a target="_blank" title="Jump List" href="https://docs.microsoft.com/en-us/windows/win32/shell/knownfolderid">KNOWNFOLDERID</a>
+                (GUID) values.&nbsp; For example, Microsoft's Notepad found in
+                the system folder "%WINDIR%\SYSTEM32\NOTEPAD.EXE" has the <i>AppID</i>
+                0x9b9cdc69c1c24e2b.</p>
+            </li>
+            <li>
+              <p style="text-align: justify; font-size: 1em;">Many of the Windows 10
+                applications, such as those created using the Unified Windows
+                Platform (UWP), have an <i>AppUserModelID</i> recorded in the
+                Registry.&nbsp; This value is used to create the <i>AppID</i>.&nbsp;
+                For example, Windows Explorer "MICROSOFT.WINDOWS.EXPLORER" has
+                the <i>AppID</i> 0xf01b4d95cf55d32a.</p>
+            </li>
+          </ol>
+          <p style="text-align: justify; font-size: 1em;">The polynomial used by the CRC-64
+            algorithm is 0x92C64265D32139A4 (see the <a target="_blank" title="Jump List"
+
+              href="http://www.hexacorn.com/blog/2013/04/30/jumplists-file-names-and-appid-calculator/">Hexacorn
+              tech blog</a>).</p>
+          <p style="text-align: justify; font-size: 1em;">The method used by the Windows
+            Operating System to create the <i>AppID</i> is dependent upon a
+            number of elements: application installation location variation
+            between versions of Windows and individual systems; transient system
+            folder location variation depending on the application version or
+            user preference; and the spanning of the Windows system over more
+            than one logical volume.</p>
+          <p style="text-align: justify; font-size: 1em;">Although many applications may appear
+            to have a consistent <i>AppID</i> across multiple systems, an <i>AppID</i>
+            for an <i>Automatic Destination</i> on one system <b>may not be
+              the same for another</b>.</p>
+          <p style="text-align: justify; font-size: 1em;">The <i>AppUserModelID</i> for
+            relevant applications can be found within the HKEY_CLASSES_ROOT
+            pseudo Hive of the Windows Registry.</p>
+          <p style="text-align: justify; font-size: 1em;">The Automatic Destination databases
+            are formatted as <a target="_blank" title="Jump List" href="https://docs.microsoft.com/en-us/windows/win32/stg/structured-storage-start-page">Structured
+              Storage</a> and are found in the folder;<br>
+            "%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations"
+            for each installed User.</p>
+          <p style="text-align: justify; font-size: 1em;">Each Destination database includes the recorded destinations for a
+            particular application incorporating the <i>AppID</i> in to the
+            database filename.&nbsp; For example, the Destination database for
+            Microsoft's Wordpad is named
+            "469e4a7982cea4d4.automaticDestinations-ms".</p>

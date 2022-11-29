@@ -1,0 +1,60 @@
+<p style="font-size: 1em;"><i>Create a forensic copy of partition 3 of physical drive 2</i>
+(using a block size of 1 megabyte)<br>
+<b style="font-family: Courier New;">dd
+  if=\\.\harddisk2\partition3 of=file.dd bs=1M</b><br>
+&nbsp;<br>
+<i>Copy the first sector of physical drive 2 (512 byte sector
+  size)</i><br>
+<b style="font-family: Courier New;">dd if=\\.\physicaldrive2
+  of=file.dd bs=512 count=1</b><br>
+<br>
+<i>Write a disc image to physical drive 2</i><br>
+<b style="font-family: Courier New;">dd if=file.img
+  of=\\.\physicaldrive2 bs=1M</b><br>
+<br>
+Note: Windows does not allow direct writes to sectors of a
+drive which are owned by a mounted filesystem.<br>
+<br>
+<b>\dev\zero and \dev\random for Windows</b><br>
+Unlike UNIX-like Operating Systems, Windows does not provide
+the virtual devices 'zero' and 'random'.&nbsp; However, a zero
+and random device driver for Windows (Vista, Server 2008, 7,
+8, 8.1 and 10) is available from <a href="http://www.ltr-data.se/opencode.html/#ZeroDrv"
+  title="Zero and Ramdom Device Driver" target="_blank">here</a>.<br>
+<br>
+<i>To zero physical drive 5</i><br>
+<b style="font-family: Courier New;">dd if=\\.\zero
+  of=\\.\physicaldrive5 bs=1M<br>
+</b><br>
+<b>SIGUSR1 for Windows</b><br>
+Also unlike UNIX-like Operating Systems, Windows does not
+provide a native tool to raise the SIGUSR1 signal to
+applications by process Id (PID).&nbsp; This Windows port of <i>dd
+</i>will react to the SIGBREAK signal as if it received the
+SIGUSR1 signal.&nbsp; This signal can be raised using the <i>kill</i> application port
+below.&nbsp; The process Id (PID) of existing processes can be
+determined using the Windows <a target="_blank" title="tasklist"
+  href="https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/tasklist">tasklist</a>
+command-line application or <a target="_blank" title="Process Explorer"
+  href="https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer">
+  Process Explorer</a> by <a title="Sysinteranls" target="_blank"
+  href="https://docs.microsoft.com/en-us/sysinternals/">Sysinternals</a>.<br>
+<br>
+<i>To display the applications progress/information of an
+  existing dd process</i><br><br>
+<b style="font-family: Courier New; font-size: 0.8em">&gt;tasklist /fi "imagename eq dd.exe"<br>
+  <br>
+  Image
+  Name
+  PID&nbsp;&nbsp;Session Name
+  Session# Mem Usage<br>
+  ========== ==== ============
+  ======== =========<br>
+  dd.exe&nbsp;&nbsp;&nbsp;&nbsp;
+  9188
+  Console&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  1&nbsp;&nbsp; 4,748 K<br>
+  <br>
+  &gt;kill -SIGBREAK 9188<br>
+  <br>
+</b>Raising the SIGINT signal will interrupt the process.</p>

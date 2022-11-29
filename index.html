@@ -1,0 +1,1775 @@
+<!doctype html>
+<html lang="en" class="no-js">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+      <!-- Optional theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- Latest compiled and minified JavaScript -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+      <link rel="canonical" href="https://html5-templates.com/" />
+      <title>Arctic Forensics (digital data analysis made simple)</title>
+      <meta name="description" content="A brief page description">
+      <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+      <script src="script.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function () {
+           $('#fullpage').fullpage({
+             sectionsColor: ['mediumturquoise', '#4BBFC3', '#7BAABE', 'chartreuse', 'lightgrey', '#ccddff', '#ffccdd', 'palegreen', '#ffb973'],
+             anchors: ['home', 'downloads', 'acknowledgments', 'faq', 'products', 'products1', 'products2', 'products3', 'consoleTools'],
+             menu: '#menu',
+             slidesNavigation: true,
+           });
+         });
+         
+         $(window).load(function () {
+             $(".trigger_popup_fricc_arcticLinux").click(function(){
+                $('.hover_bkgr_fricc_arcticLinux').show();
+             });
+             $('.hover_bkgr_fricc_arcticLinux').click(function(){
+                 $('.hover_bkgr_fricc_arcticLinux').hide();
+             });
+         });
+         $(window).load(function () {
+             $(".trigger_popup_fricc_USB").click(function(){
+                $('.hover_bkgr_fricc_USB').show();
+             });
+             $('.hover_bkgr_fricc_USB').click(function(){
+                 $('.hover_bkgr_fricc_USB').hide();
+             });
+         });
+         $(window).load(function () {
+             $(".trigger_popup_fricc_NTLMHash").click(function(){
+                $('.hover_bkgr_fricc_NTLMHash').show();
+             });
+             $('.hover_bkgr_fricc_NTLMHash').click(function(){
+                 $('.hover_bkgr_fricc_NTLMHash').hide();
+             });
+         });
+      </script>
+      <style>
+         .container {
+            column-count: 2;
+         }
+         .column {
+           float: left;
+           width: 50%;
+         }
+      </style>
+   </head>
+   <body>
+      <ul id="menu">
+         <li data-menuanchor="home" class="active"><a href="#home" style="font-size: 0.75em;">Home</a></li>
+         <li data-menuanchor="downloads"><a href="#downloads" style="font-size: 0.75em;">Downloads</a></li>
+         <li data-menuanchor="Contact"><a href="mailto:arcticforensics.au@gmail.com" style="font-size: 0.75em;">Contact</a>
+         <li data-menuanchor="acknowledgments"><a href="#acknowledgments" style="font-size: 0.75em;">Acknowledgment</a></li>
+         <li data-menuanchor="faq"><a href="#faq" style="font-size: 0.75em;">FAQ</a></li>
+         <li data-menuanchor="products"><a href="#products" style="font-size: 0.75em;">Products</a></li>
+         <li data-menuanchor="examples"><a target="_blank" href="https://1drv.ms/u/s!Anhlh8s9ewDpgU0UJ3XcPw9DeRwA?e=1u64w7" style="font-size: 0.75em;">Examples</a></li>
+         </li>
+      </ul>
+      <div id="fullpage">
+         <div class="section active" id="section0">
+            <div style="height: 80%; overflow:auto; padding-top: 50px;">
+               <img style="height: 6em;" title="arcticForensics" alt="" src="polar-bear.png">
+               <h1 style="text-align: center;">Arctic Forensics
+               </h1>
+               <p style="text-align: center;"><b>Digital data analysis made simple</b></p>
+               <p>
+                  Welcome to Arctic Forensics.<br>
+                  <br>
+                  <a href="#products1"><i>arcticBear</i></a>, the
+                  primary product from Arctic Forensics, is an all-in-one solution for
+                  creating forensic copies of digital storage media, both attached and
+                  removable devices&nbsp; The application shares a symbiotic relationship with 
+                  <a class="trigger_popup_fricc_arcticLinux">arcticLinux</a>, a forensic Operating System based on the Linux kernel.<br><br>
+                  A number of other products are also available, each created to fulfill a
+                  specific task.<br>
+                  <br>
+                  All products are provided as-is, open-source, and are subject to the <a
+                     target="_blank" href="https://www.gnu.org/licenses/gpl-3.0.en.html">GNU
+                  General Public License</a>. All Source code is made available directly,
+                  where available, otherwise links to sources are provided.&nbsp; There is no
+                  proprietary software involved with any Arctic Forensics product.
+               </p>
+               <p style="text-align: right; font-size: 75%; margin-right: 1em;">Last Updated: 2022-11-29</p>
+            </div>
+         </div>
+         <div class="section" id="section1">
+	    <div style="height: 80%; overflow:auto; padding-top: 50px;">
+               <img style="width: 3em; height: 3em; margin-top: -1em;" title="downloads" alt="" src="downloads.png"/>
+               <h1 style="margin-left: 1em;">Downloads</h1>
+               <br>
+               <p style="margin-left: 2em; margin-right: 2em;"><i>arcticBear</i> and <i>nanoq</i> (Release 1.11 build 151) are available as boot disc
+                  image files, based on a 512-byte sector size, and optical media (ISO).
+               </p>
+               <p style="margin-left: 2em; margin-right: 2em;">Two common methods of booting a computer are via the Basic In/Output
+                  System (BIOS) or the (Unified) <a target="_blank" href="http://www.uefi.org/specifications">Extensible
+                  Firmware Interface</a> (UEFI).&nbsp; BIOS, also known as Legacy, has
+                  been ostensibly superseded by (U)EFI.&nbsp; Although not universal, BIOS
+                  systems traditionally boot from drives formatted with the Master Boot
+                  Record (MBR) schema, while (U)EFI systems generally boot from drives
+                  with the GUID Partition Table (GPT) schema.
+               </p>
+               <p style="margin-left: 2em; margin-right: 2em;">Some modern systems support both Legacy and (U)EFI paradigms.&nbsp;
+                  Support for Legacy systems by (U)EFI is often referred to as the <em>
+                  Compatibility Support Module</em> (CSM).
+               </p>
+               <p style="margin-left: 2em; margin-right: 2em;">In general, a hybrid boot image will successfully boot many modern
+                  systems.&nbsp; The hybrid schema includes a GUID Partition Table and a
+                  Master Boot Record.&nbsp; This may cause confusion with some firmware,
+                  hence the reason why <em>arcticLinux</em> is provided in a combination
+                  of schemas and architectures.
+               </p>
+               <p style="margin-left: 2em; margin-right: 2em;">Please note that only systems with the Intel x86 processing unit are
+                  supported at this time.&nbsp; All Intel x86 images include both 32 and
+                  64 bit architectures.&nbsp; The <a target="_blank" href="https://www.intel.com/content/dam/support/us/en/documents/motherboards/desktop/sb/specscdrom.pdf">El
+                  Torito</a>&nbsp;<span style="text-decoration: underline;"></span>images
+                  are for bootable optical media (ISO 9660 CD-ROM).
+                  <br><br>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                     data-target="#downloadMain">arcticBear / nanoq</button>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                     data-target="#downloadWinterBear">winterBear</button>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                     data-target="#downloadWinterCUB">winterCUB</button>
+               </p>
+               <p style="margin-left: 2em; margin-right: 2em;"><br><i>Forensic Tools</i> includes <a title="arcticExplorer" href="#products2">arcticExplorer</a>,
+                  <a title="arcticTern" href="#products3">arcticTern</a>, <a title="snowyOwl" href="#products3/1">snowyOwl</a>, <a title="arcticLynx" href="#products3/2">arcticLynx</a>, <a title="caribou" href="#products3/3">caribou</a>, <a title="snowGoose" href="#products3/4">snowGoose</a>, <a title="narwhal" href="#products3/5">narwhal</a>, <a title="ermine" href="#products3/6">ermine</a>, <a title="arcticFox" href="#products3/7">arcticFox</a> and <a title="consoleTools" href="#consoleTools">Console Tools</a>.  The Microsoft Windows binaries (version 20160918) and (Intel) Macintosh package (version 20171104) for Joachim Metz's <a title="libewf" target="_blank" href="https://github.com/libyal/libewf">libewf</a> is also available.
+                  <br><br>
+                  <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                     data-target="#downloadForensicTools">Forensic Tools</button>
+               </p>
+               <p style="margin-left: 2em; margin-right: 1em;">Note that some products require cetain prerequisites such as WinFsp.  See <a href="#faq/2">What are the prerequisites for Microsoft Windows?</a>.
+               </p>
+            </div>
+         </div>
+         <div class="section" id="section2">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="acknowledgments" alt="" src="acknowledgments.png">
+                  <h1 style="margin-left: 1em;">Acknowledgments</h1>
+                  <br>
+                  <div style="text-align: left; overflow:auto; margin-left: 2em; margin-right: 2em;">
+                     <div style="float:left; width: 50%">
+                        <p>The <a title="GNU" href="https://www.gnu.org/">GNU</a>Project.</p>
+                        <p><a href="https://buildroot.org/">Buildroot - Making embedded Linux easy.</a></p>
+                        <p>The Windows memory acquisition tool, <a title="WinPmem"
+                           href="https://rekall.readthedocs.io/en/gh-pages/Tools/pmem.html#winpmem">WinPmem</a> from <a
+                           title="Rekall" href="http://www.rekall-forensic.com/">Rekall.</a></p>
+                        <p>Phil Harvey's Exif meta information tool, <a title="ExifTool" href="https://exiftool.org/">ExifTool.</a>
+                        </p>
+                        <p>Libav fork to decode HEVC content, <a title="openHEVC"
+                           href="https://github.com/OpenHEVC/openHEVC">openHEVC.</a></p>
+                        <p>Generic WinUSB driver (Winusb.sys) and its user-mode component (Winusb.dll), <a title="WinUSB"
+                           href="https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/winusb">WinUSB.</a></p>
+                     </div>
+                     <div style="text-align: left; float:left; width: 50%">
+                        <p>Hexacorn tech blog "<a title="Hexacorn tech blog"
+                           href="http://www.hexacorn.com/blog/2013/04/30/jumplists-file-names-and-appid-calculator/">JumpLists file
+                           names and AppID calculator".</a>
+                        </p>
+                        <p>The multimedia framework <a title="ffmpeg" href="https://ffmpeg.org/about.html">FFmpeg.</a></p>
+                        <p>Microsoft Windows Dynamic disk management tool, <a title="libldm"
+                           href="https://github.com/mdbooth/libldm">libldm.</a></p>
+                        <p>Curses library for DOS, OS/2, Windows console, X11 and SDL, <a title="PDCurses"
+                           href="https://pdcurses.org/">PDCurses.</a></p>
+                        <p>HEIF and AVIF file format decoder and encoder, <a title="libheif"
+                           href="https://github.com/strukturag/libheif">libheif.</a></p>
+                        <p>The Linux SCSI Target <a title="targetcli" href="http://linux-iscsi.org/wiki/Targetcli">targetcli</a> by <a
+                           title="Datera" href="https://datera.io/">Datera.</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="acknowledgments" alt="" src="acknowledgments.png">
+                  <h1 style="margin-left: 1em;">Acknowledgments</h1>
+                  <br>
+                  <div style="text-align: left; overflow:auto; margin-left: 2em; margin-right: 2em;">
+                     <div style="text-align: left; float:left; width: 50%">
+                        <p>The <a title="Linux USB" href="http://www.linux-usb.org/">Linux USB</a> Project (<a title="usbnet"
+                           href="http://www.linux-usb.org/usbnet/">usbnet</a>).</p>
+                        <p>Simple DirectMedia Layer development library, <a title="SDL2" href="https://www.libsdl.org/">SDL2.</a></p>
+                        <p>Redland RDF Libraries (<a title="librdf" href="http://librdf.org/">librdf</a>).</li>
+                        </p>
+                        <p>Library for transferring data with URLs, <a title="libcurl" href="https://curl.haxx.se/">libcurl.</a></p>
+                        <p>Text conversion library <a title="libiconv" href="https://www.gnu.org/software/libiconv/">libiconv.</a></p>
+                        <p><a href="https://forensicswiki.xyz/wiki/index.php?title=Joachim_Metz">Joachim Metz</a> and his <a
+                           href="https://github.com/libyal">Libyal project</a></p>
+                     </div>
+                     <div style="text-align: left; float:left; width: 50%">
+                        <p>The <a title="CurlFtpFS" href="http://curlftpfs.sourceforge.net/">CurlFtpFS</a>
+                           Project.
+                        </p>
+                        <p><a title="Roderick W. Smith's Web Page" href="http://www.rodsbooks.com/">Roderick
+                           W. Smith</a> (sgdisk).
+                        </p>
+                        <p>Open h.265 codec implementation, <a title="libde256"
+                           href="https://github.com/strukturag/libde265">libde256.</a></p>
+                        <p>Windows File System Proxy (<a href="http://www.secfs.net/winfsp/">WinFsp</a>).</p>
+                        <p>James Bottomley's blog, "<a
+                           href="https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/">Linux Foundation
+                           Secure Boot System Released</a>".
+                        </p>
+                        <p>The XML C parser and toolkit of Gnome, <a title="libxml2" href="http://xmlsoft.org/">libxml2.</a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="section" id="section3">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="faq" alt="" src="faq.png">
+                  <h1 style="margin-left: 1em;">FAQ</h1>
+                  <br>
+                  <p style="margin-left: 2em; margin-right: 2em;"><strong>How do I create an arcticLinux bootable medium?</strong></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">The arcticLinux OS (containing arcticBear/nanoq) is available as an ISO (for optical media) or raw disk image (for boot discs).  The commands <i>dd </i>(and <i>sgdisk</i>) on UNIX-like OS can be used or similar commands found in the 
+                     <a href="#consoleTools" title="Console Tools">Console Tools</a> (Windows ports).
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#makeBootableMedium">Making a Bootable Medium</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="faq" alt="" src="faq.png">
+                  <h1 style="margin-left: 1em;">FAQ</h1>
+                  <br>
+                  <p style="margin-left: 2em; margin-right: 2em;"><strong>Booting a Secure Boot System</strong></p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>arcticLinux</i> supports (U)EFI <a target="_blank" href="http://www.uefi.org/sites/default/files/resources/UEFI_Secure_Boot_in_Modern_Computer_Security_Solutions_2013.pdf">Secure
+                     Boot</a> (64-bit systems only).  Although not digitally
+                     signed, the <i>arcticLinux</i> kernel is authenticated via an (U)EFI
+                     pre-loader provided through the Linux Foundation Secure Boot System (see 
+                     <a target="_blank" href="https://blog.hansenpartnership.com/linux-foundation-secure-boot-system-released/">James Bottomley's blog</a>).
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">The pre-loader is used to enroll the hash of the "loader" EFI-stub,
+                     which contains <i>arcticLinux</i>.&nbsp; Enrolling the appropriate
+                     hash requires user interaction.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">If the <i>arcticLinux</i> EFI-stub is not
+                     enrolled on the particular firmware, the (U)EFI system will launch the 'preloader' which provides a basic
+                     user-interface.  The user must then enroll the hash by selecting the 'loader.efi'.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#efiLoader">EFI Loader Example</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide3">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="faq" alt="" src="faq.png">
+                  <h1 style="margin-left: 1em;">FAQ</h1>
+                  <br>
+                  <p style="margin-left: 2em; margin-right: 2em;"><strong>What are the prerequisites for Microsoft Windows?</strong></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Many of the Arctic Forensics packages rely
+                     on <a target="_blank" href="https://github.com/libfuse/libfuse#about">Filesystem
+                     in User-space</a> (FUSE) which is not available for Microsoft
+                     Windows.&nbsp; However, <a target="_blank" href="https://github.com/billziss-gh/winfsp#----winfsp--windows-file-system-proxy----------------">WinFsp</a>
+                     provides the same functionality.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#installingWinFsp">Installing WinFsp</button>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="section" id="section4">
+            <div style="height: 80%; overflow:auto; padding-top: 50px;">
+	       <div class="column">
+               <table style="margin-left: 2em; margin-right: 2em;" border="1">
+                  <tbody>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products1/1">
+                              <img title="Arctic Linux without user interface (host)" style=" max-width: 48px;" alt="" src="arcticBear.linux.png"/>
+                              <figcaption>nanoq</figcaption>
+                           </a>
+                        </td>
+			<td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;"><i>arcticLinux</i> operating system 'target mode' not requiring user interaction (host side).</p>
+			</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products1/3">
+                              <img title="Windows client application" style=" max-width: 48px;" alt="" src="winterCUB.win.png"/>
+                              <figcaption>winterCUB</figcaption>
+                           </a>
+			</td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Client side user interface for <i>arcticBear</i>/<i>nanoq</i> (Microsoft Windows).</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products2">
+                              <img title="Natively mount foreign file systems" style=" max-width: 48px;" alt="" src="aexplorer.win.png"/>
+                              <figcaption>arcticExplorer</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Microsoft Windows port of FUSE based file system projects.</p>
+                        </td>
+                     </tr>	                     
+		     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/2">
+                              <img title="HEIF media file viewer/converter" style=" max-width: 48px;" alt="" src="arcticLynx.png"/>
+                              <figcaption>arcticLynx</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">HEIF media file viewer/converter.</p>
+                       </td>
+                     </tr>	     
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/8">
+                              <img title="Apple APFS decryptor" style=" max-width: 48px;" alt="" src="arcticWolf.png"/>
+                              <figcaption>arcticWolf</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Apple APFS decryptor.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/6">
+                              <img title="Windows PhoneLink (previously YourPhone) application data parser" style=" max-width: 48px;" alt="" src="ermine.png"/>
+                              <figcaption>ermine</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Microsoft Windows PhoneLink (previously YourPhone) application data parser.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/4">
+                              <img title="Media recovery for Hikvision and RaySharp (Swann) DVR" style=" max-width: 48px;" alt="" src="snowGoose.png"/>
+                              <figcaption>snowGoose</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Media recovery for Hikvision and RaySharp (Swann) DVR.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/9">
+                              <img title="Apple plist viewer" style=" max-width: 48px;" alt="" src="puffin.png"/>
+                              <figcaption>puffin</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Apple plist viewer.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#consoleTools">
+                              <img title="Collection of Windows console tools" style=" max-width: 48px;" alt="" src="GNU.win.png"/>
+                              <figcaption>Console tools</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">A collection of Microsoft Windows console tools.</p>
+                        </td>
+                     </tr>
+		  </tbody>
+               </table>
+	       </div>
+	       <div class="column">
+               <table style="margin-left: 2em; margin-right: 2em;" border="1">
+                  <tbody>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products1">
+                              <img title="Arctic Linux user interface (host)" style=" max-width: 48px;" alt="" src="arcticBear.linux.png"/>
+                              <figcaption>arcticBear</figcaption>
+                           </a>
+                        </td>
+			<td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;"><i>arcticLinux</i> operating system with text-based user interface (host size).</p>
+			</td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products1/2">
+                              <img title="ArcticBear for live Windows (host)" style=" max-width: 48px;" alt="" src="arcticBear.win.png"/>
+                              <figcaption>winterBear</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">The Microsoft Windows equivalent to <i>arcticBear</i>/<i>nanoq</i> for 'Live' acquisition of Windows based computers.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/7">
+                              <img title="Windows software write-blocker" style=" max-width: 48px;" alt="" src="arcticFox.png"/>
+                              <figcaption>arcticFox</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Microsoft Windows software write-blocker.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3">
+                              <img title="Time storage conversion utility" style=" max-width: 48px;" alt="" src="arcticTern.png"/>
+                              <figcaption>arcticTern</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">A time storage conversion utility.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/3">
+                              <img title="Media file metadata and codec parser" style=" max-width: 48px;" alt="" src="caribou.png"/>
+                              <figcaption>caribou</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Media file metadata and codec parser.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/5">
+                              <img title="Windows Registry parser" style=" max-width: 48px;" alt="" src="narwhal.png"/>
+                              <figcaption>narwhal</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Microsoft Windows Registry parser.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/1">
+                              <img title="Windows Jump Lists parser" style=" max-width: 48px;" alt="" src="snowyOwl.png"/>
+                              <figcaption>snowyOwl</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Microsoft Windows Jump List parser.</p>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="text-align: center;">
+                           <a href="#products3/10">
+                              <img title="Apple iTunes backup and Keychain decryptor/parser" style=" max-width: 48px;" alt="" src="reindeer.png"/>
+                              <figcaption>reindeer</figcaption>
+                           </a>
+                        </td>
+                        <td style="vertical-align: top;">
+			   <p style="font-size: 1.25em;">Apple iTunes backup and Keychain decryptor/parser.</p>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+	       </div>
+            </div>
+         </div>
+         <div class="section" id="section5">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticBear" alt="" src="arcticBear.linux.png">
+                  <h1 style="margin-left: 1em;">arcticBear</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">Although arcticBear is an application, the product is packaged
+                     with the arcticLinux forensic Operating System which includes all of the necessary supporting tools.
+                     arcticLinux is based on a minimalist Linux kernel which excludes a Graphical User Interface (GUI). The
+                     arcticBear User Interface is text based and driven using a standard AT 84-key keyboard.<br><br>
+                     The package is supplied as a bootable medium for Intel x86 based computers (32 and 64 bit) and is capable of
+                     booting BIOS (legacy) and (U)EFI systems.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#arcticBearMore">more...</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="nanoq" alt="" src="arcticBear.linux.png">
+                  <h1 style="margin-left: 1em;">nanoq</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A <i>Target Mode</i> emulator based upon arcticBear.<br><br>
+                     nanoq is an alternative to <a title="arcticBear" href="#products1">arcticBear</a> with reduced functionality
+                     that requires no user interaction. As with <a title="arcticBear" href="#products1">arcticBear</a>, nanoq is
+                     launched after the arcticLinux OS boots. The Linux frame buffer device console is used as a pseudo graphical
+                     interface. For those systems that do not support frame buffer, a series of instructions are displayed on the
+                     text console.<br><br>
+                     The graphical interface displays the USB symbol (<img style="height: 0.9em; float: none; margin: 0"
+                        title="USB" alt="USB" src="USB.png">) for each supported USB Host-to-Host transfer cable connected (at least
+                     one symbol is displayed to indicate that the application is ready). A particular USB symbol is displayed as
+                     either grey, yellow or green. A single grey symbol indicates that no supported cables are connected. A yellow
+                     symbol represents a supported, connected cable, and a green symbol indicates that a successful handshake with
+                     a relevant client machine has been achieved and data transfer is active.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#nanoqMore">more...</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide3">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="winterBear" alt="" src="arcticBear.win.png">
+                  <h1 style="margin-left: 1em;">winterBear</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">The Microsoft Windows equivalent to <a title="arcticBear"
+                     href="#products1">arcticBear</a> is winterBear. When launched, the Windows Management Instrument (WMI) is
+                     used to enumerate all drives/volumes. This includes collating Dynamic drives (using the Logical Disk Manager
+                     <a title="ldmtool" target="_blank" href="https://github.com/mdbooth/libldm">ldmtool</a>) and mounted pseudo
+                     volumes (such as TrueCrypt/VeraCrypt and BitLocker volumes).
+                     <br><br>
+                     The application auto-detects when a USB Windows Transfer Cable (WET) is connected and attempts to hand-shake
+                     with an instance of the client application (<a title="arcticBear" href="#products1/3">winterCUB</a>). Only the
+                     Prolific chip-sets PL25A1 and PL27A1 are supported for cable transfer but no device driver software is
+                     required. As a consequence, systems with a Prolific WET cable driver installed (such as Cellebrite's Physical
+                     Analyzer) will obscure cable access for both winterBear and winterCUB. See
+                     <a data-toggle="modal" data-target="#HowToRemoveCellebriteDriver">"How to remove Cellebrite transfer cable
+                     driver"</a>.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#winterBearMore">more...</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide4">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="winterCUB" alt="" src="winterCUB.win.png">
+                  <h1 style="margin-left: 1em;">winterCUB</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The client application for Microsoft Windows, <i>winterCUB</i> (Windows Client via USB Bridge), is the client
+                     side of <a title="arcticBear" href="#products1">arcticBear</a> and <a title="winterBear"
+                        href="#products1/2">winterBear</a>. <i>winterCUB</i> functions exclusively with a Windows Easy Transfer cable
+                     (USB Host-to-Host cable) to communicate with the host computer. All block devices and logical volumes from the
+                     host computer are exposed as read-only pseudo files accessible through the <i>winterCUB</i> icon on the
+                     Desktop.
+                     <br><br>
+                     The <i>winterCUB</i> Desktop icon represents a pseudo folder containing folders named after the Plug and Play
+                     Identifier of each compatible transfer cable connected. That is, a single instance of <i>winterCUB</i> can
+                     manage multiple hosts. Deleting the Desktop icon will terminate the application.
+                     <br><br>
+                     A software driver for transfer cables is not used by Microsoft Windows 8 and above. The WinUSB API is utilised
+                     instead. In the case of cables containing Prolific PL25A1 and PL27A1 chip-sets, some products such as
+                     Cellebrite's Physical Analyzer install drivers that interfere with <i>winterCUB</i>. See
+                     <a data-toggle="modal" data-target="#HowToRemoveCellebriteDriver">"How to remove Cellebrite transfer cable
+                     driver"</a>.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#winterCUBMore">more...</button>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="section" id="section6">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticExplorer" alt="" src="aexplorer.win.png">
+                  <h1 style="margin-left: 1em;">arcticExplorer</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A Microsoft Windows port of FUSE based file system projects.</p>
+                  <p style="margin-left: 2em; margin-right: 2em;">The Graphical User Interface (GUI) <i>arcticExplorer</i> provides a
+                     simple interface to mount and access (read-only) the file systems: Ext
+                     2/3/4, HFS/HFS+, APFS, NTFS, FAT 12/16/32 and ExFAT.&nbsp; Theses file systems
+                     are accessible from physical mass storage media or file containers such
+                     as Apple's DMG, Expert Witness Format / Encase Image File Format (EWF,
+                     E01) and raw images.  This includes encrypted volumes using BitLocker, LUKS, TrueCrypt/VeraCrypt and APFS encryption.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>arcticExplorer </i>can also mount Zip archives, Windows Registry
+                     Hives and File Transfer Protocol (FTP) connections as pseudo file
+                     systems.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">All utilise the software interface <a target="_blank" title="FUSE" href="https://github.com/libfuse/libfuse#libfuse">Filesystem
+                     in User-space</a> (FUSE) for Unix-like Operating Systems. In order to
+                     use these projects on the Microsoft Windows Operating System, <a target="_blank"
+                        title="WinFSP" href="http://www.secfs.net/winfsp">Windows File System
+                     Proxy</a> (WinFsp) must be installed.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>arcticExplorer </i>requires Administrator privileges and launches
+                     as a persistent application (controlled via the System Tray).&nbsp; If
+                     the 'Auto Mount' option is set, <em>arcticExplorer </em>will mount
+                     supported file systems found on the arrival of new block devices.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Although file systems NTFS and Ex/FAT are supported natively by
+                     Windows, <em>arcticExplorer </em>does not rely on the Operating System
+                     so file attributes such as security permissions, system and hidden bits
+                     are ignored.&nbsp; Each file system is mounted as read-only making <i>arcticExplorer
+                     </i> forensically sound.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticExplorer" alt="" src="aexplorer.win.png">
+                  <h1 style="margin-left: 1em;">arcticExplorer</h1>
+                  continued...
+                  <p style="margin-left: 2em; margin-right: 2em;"><b>Usage</b></p>
+                  <p style="margin-left: 2em; margin-right: 2em;"> Through the <i>Manage File System </i>panel, select one of the
+                     three tabs;
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><b>Physical Media</b></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">From the Device drop-down, select a block device.&nbsp; The Partitions
+                     list-box displays details found in the device's partition table (GPT,
+                     MBR and APM).&nbsp; Use the <i>Mount/Unmount </i>buttons to
+                     mount/unmount any of the supported file systems.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><img alt=" " style="max-width: 600px;" title="Physical Media" src="Example-AE-PhysicalMedia.png"></p>
+               </div>
+            </div>
+            <div class="slide" id="slide3">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticExplorer" alt="" src="aexplorer.win.png">
+                  <h1 style="margin-left: 1em;">arcticExplorer</h1>
+                  continued...
+                  <p style="margin-left: 2em; margin-right: 2em;"><b>File Container</b></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Use the <i>Open button</i> to parse the <i>Container File</i> and list identified partitions in the <i>Partitions list</i>.  A Container File can be a: raw image of a block device, Zip archive (excluding spanned archives), Windows Registry Hive, Apple Disk iMaGe (DMG), Expert Witness Format / Encase Image File Format (E01), Microsoft Virtual Hard Drive (VHD), Microsoft BitLocker* Full Volume Encryption (FVE) or Linux Unified Key Setup (LUKS)</p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Use the <i>Mount/Unmount</i> buttons to mount/unmount any of the supported file systems.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><img alt=" " style="max-width: 600px;" title="Physical Media" src="Example-AE-ContainerFiles.png"></p>
+               </div>
+            </div>
+            <div class="slide" id="slide4">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticExplorer" alt="" src="aexplorer.win.png">
+                  <h1 style="margin-left: 1em;">arcticExplorer</h1>
+                  continued...
+                  <p style="margin-left: 2em; margin-right: 2em;"><b>File Transfer Protocol / Secure Shell</b></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Mounts a remote directory hosted locally as a Windows file system using either the FTP or SSH protocol.  Specifically, a Windows port of
+                     the <a target="_blank" title="CurlFtpFS" href="http://curlftpfs.sourceforge.net/">CurlFtpFS</a>
+                     and <a target="_blank" title="SSHFS-Win" href="https://github.com/billziss-gh/sshfs-win">SSHFS</a>
+                     projects.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><img alt=" " style="max-width: 600px;" title="FTPServer" src="Example-AE-FTPServer.png"></p>
+               </div>
+            </div>
+            <div class="slide" id="slide5">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticExplorer" alt="" src="aexplorer.win.png">
+                  <h1 style="margin-left: 1em;">arcticExplorer</h1>
+                  continued...
+                  <p style="margin-left: 2em; margin-right: 2em;"><b>Supported File Systems</b></p>
+                  <p style="margin-left: 2em; margin-right: 2em;">If successful, a mounted volume is represented by a pseudo folder on the current Desktop.  The folder is displayed with an icon based on the file system origins (Microsoft, Apple, Linux).  Deleting this folder will un-mount the volume (same as pressing the Unmount button).
+                  <table style="margin-left: 2em; margin-right: 2em;" border="0">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: center;"><img title="Apple File System" style="max-width: 96px;" alt="" src="AppleFS.png"/></td>
+                           <td style="text-align: center;"><img title="Microsoft file system" style="max-width: 96px;" alt="" src="MicrosoftFS.png"/></td>
+                           <td style="text-align: center;"><img title="Linux file system" style="max-width: 96px;" alt="" src="LinuxFS.png"/></td>
+                           <td style="text-align: center;"><img title="FTP/SSH file system" style="max-width: 96px;" src="cloud.png"/></td>
+                           <td style="text-align: center;"><img title="Windows Registry file system" style="max-width: 96px;" alt="" src="WinRegFS.png"/></td>
+                           <td style="text-align: center;"><img title="Zip file system" style="max-width: 96px;" alt="" src="ZipFS.png/"></td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: center;">Apple HFS/HFS+</td>
+                           <td style="text-align: center;">Microsoft NTFS,<br>FAT, ExFAT</td>
+                           <td style="text-align: center;">Linux Ext</td>
+                           <td style="text-align: center;">FTP / SSH<br>as a File System</td>
+                           <td style="text-align: center;">Windows Registry Hive<br>as a File System</td>
+                           <td style="text-align: center;">Zip<br>as a File System</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The application (<i>aexplore.exe</i>) does not require installation as it runs as a stand-alone program.  Once running, an icon appears in the System Tray and the File System Manager is displayed.  The application continues until closed through the Context Menu (right-click on the System Tray icon).  The <a target="_blank" title="WinFSP" href="http://www.secfs.net/winfsp">Windows File System Proxy</a> (WinFsp) must first be installed.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#installingWinFsp">Installing WinFsp</button>
+                  </p>
+                  </p>
+               </div>
+            </div>
+         </div>
+         <div class="section" id="section7">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticTern" alt="" src="arcticTern.png">
+                  <h1 style="margin-left: 1em;">arcticTern</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     A time storage conversion utility.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     Time values can be stored using numerous formats and vary by metrics such as epoch and unit of measure,  One of the more common formats originated from the Unix Operating System (OS), storing a time value as the number of seconds since midnight on the 1st of January 1970.  Many are stored as integers while others use floating point.  Additionally, endianness varies between Operating Systems.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     arcticTern was created as a utility to convert between formats and identify which format a time value may be using.  The application also includes a time difference calculator and a time arithmetic calculator.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#arcticTernMore">more...</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="snowyOwl" alt="" src="snowyOwl.png">
+                  <h1 style="margin-left: 1em;">snowyOwl</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     A Microsoft Windows Jump List (Destination) parsing and reporting application.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#windowsJumpList">Understanding Windows Jump List</button>
+                  </p>
+                  <h3 style="margin-left: 2em; margin-right: 2em;">Usage</h3>
+                  <p style="font-family:courier; margin-left: 2em; margin-right: 2em;">
+                     snowyOwl [-s|--system &lt;system_folder&gt;] &lt;source_1 [-o|--offset &lt;offset&gt;]&gt; [[source_2] [-o|--offset &lt;offset&gt;]] ...
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The application accepts one or more drives and/or volumes.  In each instance, <i>snowyOwl</i> will attempt to determine the partition containing the Windows Operating System.  Only partitions or volumes containing the NTFS, FAT16/32 or ExFAT file systems are examined.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The offset option is ordinarily not required, but can be used to restrict <i>snowyOwl</i> to parsing a single partition within a source, for example.  Likewise, the system option is used to identify the Microsoft Windows system folder only when <i>snowyOwl</i> is unable to identify it.  Each parameter can be a physical entity, an Encase Image File Format (E01) or a raw image file.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     <i>snowyOwl</i> can be launched, for example, by dragging one or more E01 files onto the application.  If the application is launched without any parameters, the user is prompted to load a saved Profile.
+                     <br><br>
+                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal"
+                        data-target="#snowyOwlMore">more...</button>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide3">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticLynx" alt="" src="arcticLynx.png">
+                  <h1 style="margin-left: 1em;">arcticLynx</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A HEIF media file viewer/converter.</p>
+                  <p style="margin-left: 2em; margin-right: 2em;">The <a target="_blank" title="HEIC" href="https://www.iso.org/standard/66067.html">High
+                     Efficiency Image Format</a> (H.265) is the successor to the Advanced
+                     Video Coding (H.264) media format defined as Part 12 within the MPEG-H
+                     media suite (ISO/IEC 23008-12).
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>arcticLynx</i> was created as a
+                     utility to view and convert <a target="_blank" title="HEVC" href="https://mpeg.chiariglione.org/standards/mpeg-h/high-efficiency-video-coding">High
+                     Efficiency Video Coding</a> (HEVC) and High Efficiency Image Coding
+                     (HEIC) media files.&nbsp; Specifically, audio/video container files
+                     encoded using HEVC can be converted to Audio Video Interleave / MPEG-2
+                     media files, while HEIC image files can be converted to JPEG, WebP, PNG
+                     or BMP (and vice versa).
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">The audio/video conversion is not
+                     optimised as it simply decodes then recodes each frame of the default
+                     streams.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">As may be the case, <i>arcticLynx</i>
+                     loads all of the image streams for those HEIC files containing either a
+                     single image, a collection of images, or sequences of images.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"> The application uses a subset of the <a target="_blank" title="ffmpeg" href="https://ffmpeg.org/about.html">FFmpeg</a>
+                     libraries for audio/video and <a target="_blank" title="libheif" href="https://github.com/strukturag/libheif">libheif</a>
+                     for still image files.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>arcticLynx</i> is a stand-alone application that does not
+                     require installation.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide4">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="caribou" alt="" src="caribou.png">
+                  <h1 style="margin-left: 1em;">caribou</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A media file metadata and codec parser.</p>
+                  <p style="margin-left: 2em; margin-right: 2em;"><i>caribou</i> displays codec information (format, dictionary,
+                     streams, etc.) and metadata (TIFF/<a target="_blank" title="Exif" href="https://www.exif.org/">Exif</a>/GPS
+                     tags, <a target="_blank" title="XMP" href="https://www.adobe.com/products/xmp.html">XMP</a>,
+                     PrintIM, <a target="_blank" title="ICC Profile" href="http://www.color.org/icc_specs2.xalter">ICC
+                     Profile</a> and <a title="IPTC IIM" target="_blank" href="https://iptc.org/standards/photo-metadata/iptc-standard/">IPTC
+                     IIM</a>) as a tree-view to describe the media metrics.
+                  </p>
+                  <h3 style="margin-left: 2em; margin-right: 2em;">Information is grouped by source:</h3>
+                  <br>
+                  <div class="container">
+                     <h4>file system</h4>
+                     <p>Basic information (file name, path, size
+                        and time stamps) retrieved from the file system hosting the file.
+                     </p>
+                     <h4>metadata</h4>
+                     <p>Tag information returned from ExifTool (libheic
+                        is used for HEIC files, see <i>streams</i> below).
+                     </p>
+                     <h4>format</h4>
+                     <p>Information retrieved via FFmpeg's AVFormat library.</p>
+                     <h4>dictionary</h4>
+                     <p>Tag information retrieved via FFmpeg's AVFormat library.</p>
+                     <h4>streams</h4>
+                     <p>Stream information retrieved via FFmpeg's
+                        AVFormat library.  In the case of HEIC files, libheic is used to
+                        retrieve stream data including the metadata for each stream.
+                     </p>
+                     <br><br>
+                  </div>
+                  <p style="margin-left: 2em; margin-right: 2em;">The application uses the <a target="_blank" title="ffmpeg" href="https://ffmpeg.org/about.html">FFmpeg</a>
+                     libraries to parse codec information and Phil Harvey's <a target="_blank" title="ExifTool" href="https://exiftool.org/">ExifTool</a> to extract
+                     internal metadata (read-only).  Exif tags are described via Aware System's <a target="_blank" title="TIFF Tag Search" href="https://www.awaresystems.be/imaging/tiff/tifftags/search.html">TIFF
+                     Tag Search</a>.  <i>caribou</i> is a stand-alone application that does not require
+                     installation.  Target files can be parsed by dragging and dropping it onto the executable.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide5">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="snowGoose" alt="" src="snowGoose.png">
+                  <h1 style="margin-left: 1em;">snowGoose</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A media file recovery application for <a target="_blank" href="https://www.hikvision.com/au-en/">Hikvision</a> and <a target="_blank" href="http://www.raysharp.cn/en/">RaySharp</a> (carried by <a target="_blank" href="https://www.swann.com/au/">Swann</a> et al.) Digital/Network Video Recorders (domestic and small business closed-circuit television security systems).</p>
+                  <p style="margin-left: 2em; margin-right: 2em;">Both systems record audio/video media files using their repsective proprietary disk and file system formats.  <i>snowGoose</i> parses the stored data from either physical devices (such as those removed from the DVR units) or copies of same (EWF or raw).  The resulting files are presented in a pseudo folder on the user's Desktop.  To date, both systems store video as either H.264 (AVC) or H.265 (HEVC) raw stream data.  Hikvision provides <a title="VSPlayer" target="_blank" href="https://www.hikvision.com/en/support/tools/desktop-tools/vsplayer-for-windows-64-bit/">VSPlayer</a> for audio/video playback of their raw data, similar to RaySharp's <a title="VideoPlayer" target="_blank" href="http://www.raysharp.cn/en/download-2.html">video player</a>.  Alternatively, <i>ffplay</i> from the <a target="_blank" href="https://ffmpeg.org/about.html">ffmpeg</a> library suit or <a title="VLC" target="_blank" href="https://www.videolan.org/vlc/">VLC</a> can be used.</p>
+                  <p style="margin-left: 2em; margin-right: 2em;">A simple selection dialog is provided when the application is executed, or a copy of the source device can be dropped onto the application.</p>
+               </div>
+            </div>
+            <div class="slide" id="slide6">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="narwhal" alt="" src="narwhal.png">
+                  <h1 style="margin-left: 1em;">narwhal</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A Microsoft Windows Registry parser which extracts artefacts including system metrics, user information, network connections, identity, file associations, and more.</p>
+                  <p style="font-family:courier; margin-left: 2em; margin-right: 2em;">
+                     narwhal [-s|--system &lt;system_folder&gt;] &lt;source_1 [-o|--offset &lt;offset&gt;]&gt; [[source_2] [-o|--offset &lt;offset&gt;]] ...
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The application accepts one or more drives and/or volumes.  In each instance, <i>narwhal</i> will attempt to determine the partition containing the Windows Operating System.  Only partitions or volumes containing the NTFS, FAT16/32 or ExFAT file systems are examined.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The offset option is ordinarily not required, but can be used to restrict <i>narwhal</i> to parsing a single partition within a source, for example.  Likewise, the system option is used to identify the Microsoft Windows system folder only when <i>narwhal</i> is unable to identify it.  Each parameter can be a physical entity, an Encase Image File Format (E01) or a raw image file.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     <i>narwhal</i> can be launched, for example, by dragging one or more E01 files onto the application.  If the application is launched without any parameters, the user is prompted to load a saved Profile.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">IMPORTANT: Excerts from the <a target="_blank" href="https://github.com/gentilkiwi/mimikatz/wiki">mimikatz</a> library are used to decrtypt user password hashes.  This library may be incorrectly identified by anti-virus software such as Microsoft's Windows Defender as potentially harmful and may prevent the <i>narwhal</i> application from launching.</p>
+                  <br>
+                  <h3 style="margin-left: 2em;">NTLMhash</h3>
+                  <p style="margin-left: 2em; margin-right: 2em;">Provided with <i>narwhal</i> is an <a class="trigger_popup_fricc_NTLMHash">NTLM Hash</a> calculator, <i>NTLMhash</i>.</p>
+               </div>
+            </div>
+            <div class="slide" id="slide7">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="ermine" alt="" src="ermine.png">
+                  <h1 style="margin-left: 1em;">ermine</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A parser for the Microsoft Windows application <a target="_blank" href="https://support.microsoft.com/en-us/your-phone-app?ui=en-US&rs=en-US&ad=US">YourPhone</a>.</p>
+                  <p style="font-family:courier; margin-left: 2em; margin-right: 2em;">
+                     ermine [-s|--system &lt;system_folder&gt;] [-a|--appdata &lt;application_data_folder&gt;] &lt;source_1 [-o|--offset &lt;offset&gt;]&gt; [[source_2] [-o|--offset &lt;offset&gt;]] ...
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The application accepts one or more drives and/or volumes.  In each instance, <i>ermine</i> will attempt to determine the partition containing the Windows Operating System and the folder containing the <i>YourPhone</i> application.  Only partitions or volumes containing the NTFS, FAT16/32 or ExFAT file systems are examined.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The offset option is ordinarily not required, but can be used to restrict <i>ermine</i> to parsing a single partition within a source, for example.  Likewise, the system option is used to identify the Microsoft Windows system folder only when <i>ermine</i> is unable to identify it.  In the event that only the application data folder is avaialble, the appdata option can be used (overiding the system and offset options).  Each parameter can be a physical entity, an Encase Image File Format (E01) or a raw image file.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     <i>ermine</i> can be launched, for example, by dragging one or more E01 files onto the application.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     The application does not currently support mobile device applications.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide8">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticFox" alt="" src="arcticFox.png">
+                  <h1 style="margin-left: 1em;">arcticFox</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">A Microsoft Windows software write-blocker for attached drives (USB, SATA, virtual, etc.)</p>
+                  <p style="font-family:courier; margin-left: 2em; margin-right: 2em;">
+                     arcticFox [-s|--onstart protect=&lt;on|off&gt;] [-c|--onclose protect=&lt;on|off&gt;]
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     <i>arcticFox</i> can be launched from the command line to set the type of protection when the application starts and when it closes.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     Except for USB devices, write protection is not persistant while the application is not active.  A complete Help file accompanies the application.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide9">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="arcticWolf" alt="" src="arcticWolf.png">
+                  <h1 style="margin-left: 1em;">arcticWolf</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">An Apple APFS file system decryptor.</p>
+                  <p style="font-family:courier; margin-left: 2em; margin-right: 2em;">
+                     arcticWolf &ltsource&gt
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     <i>arcticWolf</i> can decrypt Apple's APFS file system using either password or recovery key.  The source can be a physical drive, raw drive image or Expert Witness Format / Encase Image File Format (EWF, E01).  Hardware encrypted volumes (T2 and M1) are not supported.
+                  </p>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                     Once processed, the original APFS source is exposed as a virtual volume with decrypted data, on-the-fly.  A profile file is produced which can later be used along with the 
+		     original source to reproduce on-the-fly decrypted data.
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide10">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="puffin" alt="" src="puffin.png">
+                  <h1 style="margin-left: 1em;">puffin</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">An Apple plist parser.</p>
+               </div>
+            </div>
+            <div class="slide" id="slide11">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="reindeer" alt="" src="reindeer.png">
+                  <h1 style="margin-left: 1em;">reindeer</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">An Apple iTunes backup and Keychain decryptor/parser.</p>
+               </div>
+            </div>
+         </div>
+         <div class="section" id="section8">
+            <div class="slide active" id="slide1">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="consoleTools" alt="" src="GNU.win.png">
+                  <h1 style="margin-left: 1em;">Console Tools</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                  <table style="margin-left: 2em; margin-right: 2em; height: 1em;">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: justify" colspan="2">The following command-line tools were ported from the GNU
+                              Project <a target="_blank" title="GNU Core Utilities"
+                                 href="https://www.gnu.org/software/coreutils/">Core Utilities</a> (version 8.31) to Microsoft Windows;
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>dd*</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#ddManual">Manual</button> <button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#ddExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Convert and copy a file.</td>
+                        </tr>
+                        <tr style="background-color: #ffbf73;">
+                           <td><b>sha1sum</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#sha1sumManual">Manual</button> <button type="button" class="btn btn-xs"
+                              data-toggle="modal" data-target="#sha1sumExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffbf73; text-align: justify;" colspan="2">Print or check SHA-1 digests.</td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>md5sum</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#md5sumManual">Manual</button> <button type="button" class="btn btn-xs"
+                              data-toggle="modal" data-target="#md5sumExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Print or check MD5 digests.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 0.75em; text-align: justify;" colspan="2"><br>* Tool is not forensically
+                              sound (ie. can change data).
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide2">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="consoleTools" alt="" src="Windows.png">
+                  <h1 style="margin-left: 1em;">Console Tools</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                  <table style="margin-left: 2em; margin-right: 2em;">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: justify;" colspan="2">The following command-line tools were ported from <a
+                              target="_blank" title="rodsbooks.com" href="http://rodsbooks.com/">rodsbooks.com</a> to Microsoft
+                              Windows;
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>sgdisk</b>*</td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#sgdiskManual">Manual</button> <button type="button" class="btn btn-xs"
+                              data-toggle="modal" data-target="#sgdiskExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Command-line GUID partition table
+                              (GPT) manipulator for Linux and Unix.
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffbf73;">
+                           <td><b>gdisk</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#gdiskManual">Manual</button> <button type="button" class="btn btn-xs"
+                              data-toggle="modal" data-target="#gdiskExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffbf73; text-align: justify;" colspan="2">Interactive GUID partition table
+                              (GPT) manipulator. A heavily modified port which removes all write functionality.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 0.75em; text-align: justify;" colspan="2"><br>* Tool is not forensically
+                              sound (ie. can change data).
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide3">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="consoleTools" alt="" src="Windows.png">
+                  <h1 style="margin-left: 1em;">Console Tools</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                  <table style="margin-left: 2em; margin-right: 2em;">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: justify;" colspan="2">The following command-line tools were created for Microsoft
+                              Windows;
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>drivedetails</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#drivedetailsExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Display metrics of a single or all
+                              attached physical hard drives.
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffbf73;">
+                           <td><b>hdhash</b></td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#hdhashExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffbf73; text-align: justify;" colspan="2">Calculate MD5 and SHA-1 digests of
+                              a physical hard drive / volume / partition.
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>ewf2raw</b>*</td>
+                           <td> </td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Exposes the underlying content of
+                              Expert Witness Format (EWF) container files. The application calls the 'ewfmount' application providing
+                              a unique mount point on the Desktop. The pseudo container file is named ewf1 and is 'unmounted' when the
+                              mount point is deleted.
+                              <br><br>
+                              Usage: ewf2raw &lt;ewf file&gt; [mount point]
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 0.75em; text-align: justify;" colspan="2"><br>* Requires <a title="WinFsp"
+                              target="_blank" href="http://www.secfs.net/winfsp">Windows File System Proxy</a>.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide4">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="consoleTools" alt="" src="Windows.png">
+                  <h1 style="margin-left: 1em;">Console Tools</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                  <table style="margin-left: 2em; margin-right: 2em;">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: justify;" colspan="2">The following command-line tools were created for Microsoft
+                              Windows;
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>raw2VHD</b>*</td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#raw2VHDExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">Creates a pseudo file representing
+                              a Microsoft Virtual Hard Drive (VHD) of a source file / device. By default, the VHD pseudo file appears
+                              in a unique mount point on the Desktop. The VHD is 'unmounted' when the mount point is deleted. No
+                              changes are made to the source file / device.
+                              <br><br>
+                              Usage: raw2VHD &lt;raw file / device&gt; [mount point]
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffbf73;">
+                           <td><b>ro2w</b>*</td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#ro2wExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffbf73; text-align: justify;" colspan="2">Creates a pseudo, writable file
+                              copy of a read-only file/device. All writes to the pseudo file are written to a temporary file (in the
+                              default temporary folder). No changes are made to the source file/device. By default, the writable
+                              pseudo file appears in a unique mount point on the Desktop. The writable file is 'unmounted' and
+                              temporary file deleted when the mount point is deleted.
+                              <br><br>
+                              Usage: ro2w &lt;source file/device&gt; [mount point]
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 0.75em; text-align: justify;" colspan="2"><br>* Requires <a title="WinFsp"
+                              target="_blank" href="http://www.secfs.net/winfsp">Windows File System Proxy</a>.</td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </p>
+               </div>
+            </div>
+            <div class="slide" id="slide5">
+               <div style="height: 80%; overflow:auto; padding-top: 50px;">
+                  <img style="width: 3em; height: 3em; margin-top: -1em;" title="consoleTools" alt="" src="Windows.png">
+                  <h1 style="margin-left: 1em;">Console Tools</h1>
+                  <p style="margin-left: 2em; margin-right: 2em;">
+                  <table style="margin-left: 2em; margin-right: 2em;">
+                     <tbody>
+                        <tr>
+                           <td style="text-align: justify;" colspan="2">The following command-line tool was ported from <a
+                              title="rigaux.com" target="_blank" href="http://rigaux.org/">rigaux.com</a> to Microsoft Windows;</td>
+                        </tr>
+                        <tr style="background-color: #ffb460;">
+                           <td><b>hexedit</b>*</td>
+                           <td style="text-align: right"><button type="button" class="btn btn-xs" data-toggle="modal"
+                              data-target="#hexeditManual">Manual</button> <button type="button" class="btn btn-xs"
+                              data-toggle="modal" data-target="#hexeditExample">Example</button></td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffb460; text-align: justify;" colspan="2">View and edit files in hexadecimal
+                              or in ASCII.
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="text-align: justify;" colspan="2">The following command-line tool was ported from <a
+                              title="windows-kill" target="_blank" href="https://github.com/alirdn/windows-kill">windows-kill</a>
+                              (GitHub) to Microsoft Windows;
+                           </td>
+                        </tr>
+                        <tr style="background-color: #ffbf73;">
+                           <td><b>kill</b></td>
+                           <td style="text-align: right"><a target="_blank" class="btn btn-link"
+                              href="https://github.com/alirdn/windows-kill/tree/master/windows-kill-library#how-it-works">Manual</a>
+                              <button type="button" class="btn btn-xs" data-toggle="modal" data-target="#killExample">Example</button>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="background-color: #ffbf73; text-align: justify;" colspan="2">Break (Ctrl+Break) or interrupt
+                              (Ctrl+C) a process by raising the signal SIGBREAK or SIGINT by process Id (PID).
+                           </td>
+                        </tr>
+                        <tr>
+                           <td style="font-size: 0.75em; text-align: justify;" colspan="2"><br>* Tool is not forensically
+                              sound (ie. can change data).
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!----modal efiLoader starts here--->
+      <div id="efiLoader" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">EFI Loader</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="efiLoader.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal efiLoader ends here--->
+      <!----modal arcticBearMore starts here--->
+      <div id="arcticBearMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">arcticBear</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="arcticBearMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal arcticBearMore ends here--->
+      <!----modal nanoqMore starts here--->
+      <div id="nanoqMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">nanoq</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="nanoqMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal nanoqMore ends here--->
+      <!----modal winterBearMore starts here--->
+      <div id="winterBearMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">winterBear</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="winterBearMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal winterBearMore ends here--->
+      <!----modal winterBearMore starts here--->
+      <div id="winterCUBMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">winterCUB</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="winterCUBMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal winterCUBMore ends here--->
+      <!----modal HowToRemoveCellebriteDriver starts here--->
+      <div id="HowToRemoveCellebriteDriver" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">How to remove Cellebrite transfer cable driver</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="HowToRemoveCellebriteDriver.html" allowtransparency="true" frameborder="0" scrolling="yes"
+                     width="100%" height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal HowToRemoveCellebriteDriver ends here--->
+      <!----modal md5sumManual starts here--->
+      <div id="md5sumManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="md5sumManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal md5sumManual ends here--->
+      <!----modal md5sumExample starts here--->
+      <div id="md5sumExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">md5sum Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="md5sumExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal md5sumExample ends here--->
+      <!----modal sgdiskManual starts here--->
+      <div id="sgdiskManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="sgdiskManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal sgdiskManual ends here--->
+      <!----modal sgdiskExample starts here--->
+      <div id="sgdiskExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">sgdisk Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="sgdiskExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal sgdiskExample ends here--->
+      <!----modal gdiskManual starts here--->
+      <div id="gdiskManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="gdiskManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal gdiskManual ends here--->
+      <!----modal gdiskExample starts here--->
+      <div id="gdiskExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">sgdisk Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="gdiskExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal gdiskExample ends here--->
+      <!----modal killExample starts here--->
+      <div id="killExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">kill Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="killExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal killExample ends here--->
+      <!----modal drivedetailsExample starts here--->
+      <div id="drivedetailsExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">drivedetails Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="drivedetailsExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal drivedetailsExample ends here--->
+      <!----modal hexeditManual starts here--->
+      <div id="hexeditManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="hexeditManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal hexeditManual ends here--->
+      <!----modal ddManual starts here--->
+      <div id="ddManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="ddManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal ddManual ends here--->
+      <!----modal ddExample starts here--->
+      <div id="ddExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">dd Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="ddExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal ddExample ends here--->
+      <!----modal sha1sumManual starts here--->
+      <div id="sha1sumManual" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">&nbsp;</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="sha1sumManual.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal sha1sumManual ends here--->
+      <!----modal sha1sumExample starts here--->
+      <div id="sha1sumExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">sha1sum Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="ddExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal sha1sumExample ends here--->
+      <!----modal hdhashExample starts here--->
+      <div id="hdhashExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">hdhash Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="hdhashExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal hdhashExample ends here--->
+      <!----modal raw2VHDExample starts here--->
+      <div id="raw2VHDExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">raw2VHD Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="raw2VHDExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal raw2VHDExample ends here--->
+      <!----modal ro2wExample starts here--->
+      <div id="ro2wExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">ro2w Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="ro2wExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal ro2wExample ends here--->
+      <!----modal hexeditExample starts here--->
+      <div id="hexeditExample" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">hexedit Example</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="hexeditExample.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal hexeditExample ends here--->
+      <!----modal installingWinFsp starts here--->
+      <div id="installingWinFsp" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Installing WinFsp</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="InstallingWinFsp.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal installingWinFsp ends here--->
+      <!----modal makeBootableMedium starts here--->
+      <div id="makeBootableMedium" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Making a Bootable Medium</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="makeBootableMedium.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal makeBootableMedium ends here--->
+      <!----modal downloadMain starts here--->
+      <div id="downloadMain" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Download arcticBear / nanoq (Release 1.11 build 151)</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="download.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal downloadMain ends here--->
+      <!----modal downloadWinterCUB starts here--->
+      <div id="downloadWinterCUB" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Download winterCUB (Release 1.11)</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="downloadWinterCUB.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal downloadWinterCUB ends here--->
+      <!----modal downloadWinterBear starts here--->
+      <div id="downloadWinterBear" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Download winterBear (Release 1.11)</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="downloadWinterBear.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal downloadWinterBear ends here--->
+      <!----modal downloadForensicTools starts here--->
+      <div id="downloadForensicTools" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Download Forensic Tools</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="downloadForensicTools.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal downloadForensicTools ends here--->
+      <!----modal arcticTernMore starts here--->
+      <div id="arcticTernMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">arcticTern</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="arcticTernMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal arcticTernMore ends here--->
+      <!----modal snowyOwlMore starts here--->
+      <div id="snowyOwlMore" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">snowyOwl</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="snowyOwlMore.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal snowyOwlMore ends here--->
+      <!----modal windowsJumpList starts here--->
+      <div id="windowsJumpList" class="modal fade" role='dialog'>
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Understanding Windows Jump List</h4>
+               </div>
+               <div class="modal-body" style="overflow: hidden">
+                  <iframe src="windowsJumpList.html" allowtransparency="true" frameborder="0" scrolling="yes" width="100%"
+                     height="100%"></iframe>
+               </div>
+               <div class="modal-footer">
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--Modal windowsJumpList ends here--->
+      <div class="hover_bkgr_fricc_arcticLinux">
+         <span class="helper"></span>
+         <div>
+            <p style="text-align:justify">A forensic operating system based on the Linux kernel, <i>arcticLinux</i> provides kernel-level write-blocking for block devices.</p>
+         </div>
+      </div>
+      <div class="hover_bkgr_fricc_USB">
+         <span class="helper"></span>
+         <div>
+            <p style="text-align:justify">Standard USB use a master/slave paradigm; a host acts as the master device, and a USB device acts as a slave. For a standard USB implementation, devices must assume one role or the other, with computers generally set up as hosts.  
+               A USB Host-to-Host Bridge allows a computer to perform both master and slave roles, similar to USB On-the-Go (OTG), 
+               providing a direct peer-to-peer data transfer connection between two computers via USB.
+               <img style="width: 100%;" src="USB-H2H.png">
+            </p>
+         </div>
+      </div>
+      <div class="hover_bkgr_fricc_NTLMHash">
+         <span class="helper"></span>
+         <div>
+            <p style="text-align:justify">NTLM authenticates clients and servers via a challenge-response method composed of three messages.  NTLM uses one or more server-stored hashed passwords for authentication. Each password value is a 16-byte LM hash or NT hash.
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

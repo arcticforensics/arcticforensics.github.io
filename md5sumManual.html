@@ -1,0 +1,157 @@
+<p style="font-size: 1em;"><table summary="Document Header" class="head" width="100%">
+    <col width="30%">
+    <col width="30%">
+    <col width="30%">
+    <tbody>
+        <tr>
+            <td class="head-ltitle">
+                MD5SUM(1)</td>
+            <td class="head-vol" align="center">
+                User Commands</td>
+            <td class="head-rtitle" align="right">
+                MD5SUM(1)</td>
+        </tr>
+    </tbody>
+</table>
+<div class="section">
+    <h1>NAME</h1> md5sum &#45; compute and check MD5 message digest
+</div>
+<div class="section">
+    <h1>SYNOPSIS</h1> <b>md5sum</b> [ <i>,OPTION/</i>]... [<i>,FILE/</i>]...
+</div>
+<div class="section">
+    <h1>DESCRIPTION</h1> Print or check MD5 (128&#45;bit) checksums.<p>
+        With no FILE, or when FILE is &#45;, read standard input.
+    <dl>
+        <dt>
+            <b>&#45;b</b>, <b>&#45;&#45;binary</b>
+        </dt>
+        <dd>
+            read in binary mode (default unless reading stdin)</dd>
+    </dl>
+    <dl>
+        <dt>
+            <b>&#45;c</b>, <b>&#45;&#45;check</b>
+        </dt>
+        <dd>
+            read MD5 sums from the FILEs and check them</dd>
+    </dl>
+    <dl>
+        <dt>
+            <b>&#45;&#45;tag</b>
+        </dt>
+        <dd>
+            create a BSD&#45;style checksum</dd>
+    </dl>
+    <dl>
+        <dt>
+            <b>&#45;t</b>, <b>&#45;&#45;text</b>
+        </dt>
+        <dd>
+            read in text mode (default if reading stdin)</dd>
+    </dl>
+    <dl>
+        <dt>
+            <b>&#45;z</b>, <b>&#45;&#45;zero</b>
+        </dt>
+        <dd>
+            end each output line with NUL, not newline, and disable file name escaping</dd>
+    </dl>
+    <div class="subsection">
+        <h2>The following five options are useful only when verifying checksums:</h2>
+        <dl>
+            <dt>
+                <b>&#45;&#45;ignore&#45;missing</b>
+            </dt>
+            <dd>
+                don't fail or report status for missing files</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;&#45;quiet</b>
+            </dt>
+            <dd>
+                don't print OK for each successfully verified file</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;&#45;status</b>
+            </dt>
+            <dd>
+                don't output anything, status code shows success</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;&#45;strict</b>
+            </dt>
+            <dd>
+                exit non&#45;zero for improperly formatted checksum lines</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;w</b>, <b>&#45;&#45;warn</b>
+            </dt>
+            <dd>
+                warn about improperly formatted checksum lines</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;&#45;help</b>
+            </dt>
+            <dd>
+                display this help and exit</dd>
+        </dl>
+        <dl>
+            <dt>
+                <b>&#45;&#45;version</b>
+            </dt>
+            <dd>
+                output version information and exit</dd>
+        </dl>
+        <p>
+            The sums are computed as described in RFC 1321. When checking, the input should be a former output of this
+            program. The default mode is to print a line with checksum, a space, a character indicating input mode ('*'
+            for binary, ' ' for text or where binary is insignificant), and name for each FILE.
+    </div>
+</div>
+<div class="section">
+    <h1>BUGS</h1> Do not use the MD5 algorithm for security related purposes. Instead, use an SHA&#45;2 algorithm,
+    implemented in the programs sha224sum(1), sha256sum(1), sha384sum(1), sha512sum(1), or the BLAKE2 algorithm,
+    implemented in b2sum(1)
+</div>
+<div class="section">
+    <h1>AUTHOR</h1> Written by Ulrich Drepper, Scott Miller, and David Madore.
+</div>
+<div class="section">
+    <h1>REPORTING BUGS</h1> GNU coreutils online help: <a
+        href="https://www.gnu.org/software/coreutils/">&lt;https://www.gnu.org/software/coreutils/&gt;</a>
+    <div style="height: 0.00em;">
+        &#160;</div>
+    Report any translation bugs to <a
+        href="https://translationproject.org/team/">&lt;https://translationproject.org/team/&gt;</a>
+</div>
+<div class="section">
+    <h1>COPYRIGHT</h1> Copyright &#169; 2019 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later
+    <a href="https://gnu.org/licenses/gpl.html">&lt;https://gnu.org/licenses/gpl.html&gt;</a>.<div
+        style="height: 0.00em;">
+        &#160;</div>
+    This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by
+    law.
+</div>
+<div class="section">
+    <h1>SEE ALSO</h1> Full documentation <a
+        href="https://www.gnu.org/software/coreutils/md5sum">&lt;https://www.gnu.org/software/coreutils/md5sum&gt;</a>
+    <div style="height: 0.00em;">
+        &#160;</div>
+    or available locally via: info &#39;(coreutils) md5sum invocation&#39;
+</div>
+<table summary="Document Footer" class="foot" width="100%">
+    <col width="50%">
+    <col width="50%">
+    <tr>
+        <td class="foot-date">
+            March 2019</td>
+        <td class="foot-os" align="right">
+            GNU coreutils 8.31</td>
+    </tr>
+</table></p>

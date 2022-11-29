@@ -1,0 +1,24 @@
+<p style="font-size: 1em;">
+	As with the example below, the recovery key for all unlocked BitLocker Disc Encrypted volumes are displayed (where
+	available). In such a case, the unencrypted contents of BitLocker volumes are exposed to the client.
+	<br><br>
+	<img title="winterBear" style="max-width: 768px;" alt="" src="Example-winterBear.png"></p><p style="font-size: 1em;">
+	Microsoft Windows 7 does not natively support the Prolific PL27a1 chip-set. An appropriate driver can be installed
+	via <a title="PL27a1-Win7.zip" target="_blank"
+		href="https://onedrive.live.com/?authkey=%21AF0h%2DVki6KuoVI0&cid=E9007B3DCB876578&id=E9007B3DCB876578%21129&parId=E9007B3DCB876578%21128&action=locate">PL27a1-Win7.zip</a>.
+	<br><br>The Windows screen-saver is disabled to prevent unintended terminal locking or logout.
+	<br><br>
+	The host computer's memory (RAM) is also exposed as a pseudo file to the client, allowing the full RAM to be copied
+	as a file (using Rekall's <a title="WinPmem" target="_blank"
+		href="https://rekall.readthedocs.io/en/gh-pages/Tools/pmem.html#winpmem">WinPmem</a> software driver).
+	<br><br>
+	The User Interface displays two primary pieces of information, a list of attached mass storage devices, and the UEFI
+	boot entries. At the bottom of the display is the current local time (as reported by Windows) in ISO 8601 format
+	(YYYY-MM-DD, HH:MM) and time zone information.</p><p style="font-size: 1em;">
+	<img title="winterBear" style="max-width: 384px; float: left; padding: 10px;" alt="" align="left" src="Example-winterBearShutdown.png">
+	<i>winterBear</i> can be used to shutdown the host computer using the power button in the bottom of the display.
+	<br><br>
+	The slider arrow must be dragged to the far right before the shutdown commences.
+	<br><br>
+	<i>winterBear</i> requires Administrator privileges.
+</p>

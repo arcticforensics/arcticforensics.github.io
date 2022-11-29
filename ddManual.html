@@ -1,0 +1,348 @@
+<p style="font-size: 1em;"><table summary="Document Header" class="head" width="100%">
+    <col width="30%">
+    <col width="30%">
+    <col width="30%">
+    <tbody>
+        <tr>
+            <td class="head-ltitle">
+                DD(1)</td>
+            <td class="head-vol" align="center">
+                User Commands</td>
+            <td class="head-rtitle" align="right">
+                DD(1)</td>
+        </tr>
+    </tbody>
+</table>
+<div class="section">
+    <h1>NAME</h1> dd &#45; convert and copy a file
+</div>
+<div class="section">
+    <h1>SYNOPSIS</h1> <b>dd</b> [ <i>,OPERAND/</i>]...<div style="height: 0.00em;">
+        &#160;</div>
+    <b>dd</b> <i>,OPTION/</i>
+</div>
+<div class="section">
+    <h1>DESCRIPTION</h1> Copy a file, converting and formatting according to the operands.<dl>
+        <dt>
+            bs=BYTES</dt>
+        <dd>
+            read and write up to BYTES bytes at a time (default: 512); overrides ibs and obs</dd>
+    </dl>
+    <dl>
+        <dt>
+            cbs=BYTES</dt>
+        <dd>
+            convert BYTES bytes at a time</dd>
+    </dl>
+    <dl>
+        <dt>
+            conv=CONVS</dt>
+        <dd>
+            convert the file as per the comma separated symbol list</dd>
+    </dl>
+    <dl>
+        <dt>
+            count=N</dt>
+        <dd>
+            copy only N input blocks</dd>
+    </dl>
+    <dl>
+        <dt>
+            ibs=BYTES</dt>
+        <dd>
+            read up to BYTES bytes at a time (default: 512)</dd>
+    </dl>
+    <dl>
+        <dt>
+            if=FILE</dt>
+        <dd>
+            read from FILE instead of stdin</dd>
+    </dl>
+    <dl>
+        <dt>
+            iflag=FLAGS</dt>
+        <dd>
+            read as per the comma separated symbol list</dd>
+    </dl>
+    <dl>
+        <dt>
+            obs=BYTES</dt>
+        <dd>
+            write BYTES bytes at a time (default: 512)</dd>
+    </dl>
+    <dl>
+        <dt>
+            of=FILE</dt>
+        <dd>
+            write to FILE instead of stdout</dd>
+    </dl>
+    <dl>
+        <dt>
+            oflag=FLAGS</dt>
+        <dd>
+            write as per the comma separated symbol list</dd>
+    </dl>
+    <dl>
+        <dt>
+            seek=N</dt>
+        <dd>
+            skip N obs&#45;sized blocks at start of output</dd>
+    </dl>
+    <dl>
+        <dt>
+            skip=N</dt>
+        <dd>
+            skip N ibs&#45;sized blocks at start of input</dd>
+    </dl>
+    <dl>
+        <dt>
+            status=LEVEL</dt>
+        <dd>
+            The LEVEL of information to print to stderr; 'none' suppresses everything but error messages, 'noxfer'
+            suppresses the final transfer statistics, 'progress' shows periodic transfer statistics</dd>
+    </dl>
+    <p>
+        N and BYTES may be followed by the following multiplicative suffixes: c=1, w=2, b=512, kB=1000, K=1024,
+        MB=1000*1000, M=1024*1024, xM=M, GB=1000*1000*1000, G=1024*1024*1024, and so on for T, P, E, Z, Y. Binary
+        prefixes can be used, too: KiB=K, MiB=M, and so on.
+    <p>
+        Each CONV symbol may be:
+    <dl>
+        <dt>
+            ascii</dt>
+        <dd>
+            from EBCDIC to ASCII</dd>
+    </dl>
+    <dl>
+        <dt>
+            ebcdic</dt>
+        <dd>
+            from ASCII to EBCDIC</dd>
+    </dl>
+    <dl>
+        <dt>
+            ibm</dt>
+        <dd>
+            from ASCII to alternate EBCDIC</dd>
+    </dl>
+    <dl>
+        <dt>
+            block</dt>
+        <dd>
+            pad newline&#45;terminated records with spaces to cbs&#45;size</dd>
+    </dl>
+    <dl>
+        <dt>
+            unblock</dt>
+        <dd>
+            replace trailing spaces in cbs&#45;size records with newline</dd>
+    </dl>
+    <dl>
+        <dt>
+            lcase</dt>
+        <dd>
+            change upper case to lower case</dd>
+    </dl>
+    <dl>
+        <dt>
+            ucase</dt>
+        <dd>
+            change lower case to upper case</dd>
+    </dl>
+    <dl>
+        <dt>
+            sparse</dt>
+        <dd>
+            try to seek rather than write the output for NUL input blocks</dd>
+    </dl>
+    <dl>
+        <dt>
+            swab</dt>
+        <dd>
+            swap every pair of input bytes</dd>
+    </dl>
+    <dl>
+        <dt>
+            sync</dt>
+        <dd>
+            pad every input block with NULs to ibs&#45;size; when used with block or unblock, pad with spaces rather
+            than NULs</dd>
+    </dl>
+    <dl>
+        <dt>
+            excl</dt>
+        <dd>
+            fail if the output file already exists</dd>
+    </dl>
+    <dl>
+        <dt>
+            nocreat</dt>
+        <dd>
+            do not create the output file</dd>
+    </dl>
+    <dl>
+        <dt>
+            notrunc</dt>
+        <dd>
+            do not truncate the output file</dd>
+    </dl>
+    <dl>
+        <dt>
+            noerror</dt>
+        <dd>
+            continue after read errors</dd>
+    </dl>
+    <dl>
+        <dt>
+            fdatasync</dt>
+        <dd>
+            physically write output file data before finishing</dd>
+    </dl>
+    <dl>
+        <dt>
+            fsync</dt>
+        <dd>
+            likewise, but also write metadata</dd>
+    </dl>
+    <p>
+        Each FLAG symbol may be:
+    <dl>
+        <dt>
+            append</dt>
+        <dd>
+            append mode (makes sense only for output; conv=notrunc suggested)</dd>
+    </dl>
+    <dl>
+        <dt>
+            direct</dt>
+        <dd>
+            use direct I/O for data</dd>
+    </dl>
+    <dl>
+        <dt>
+            directory</dt>
+        <dd>
+            fail unless a directory</dd>
+    </dl>
+    <dl>
+        <dt>
+            dsync</dt>
+        <dd>
+            use synchronized I/O for data</dd>
+    </dl>
+    <dl>
+        <dt>
+            sync</dt>
+        <dd>
+            likewise, but also for metadata</dd>
+    </dl>
+    <dl>
+        <dt>
+            fullblock</dt>
+        <dd>
+            accumulate full blocks of input (iflag only)</dd>
+    </dl>
+    <dl>
+        <dt>
+            nonblock</dt>
+        <dd>
+            use non&#45;blocking I/O</dd>
+    </dl>
+    <dl>
+        <dt>
+            noatime</dt>
+        <dd>
+            do not update access time</dd>
+    </dl>
+    <dl>
+        <dt>
+            nocache</dt>
+        <dd>
+            Request to drop cache. See also oflag=sync</dd>
+    </dl>
+    <dl>
+        <dt>
+            noctty</dt>
+        <dd>
+            do not assign controlling terminal from file</dd>
+    </dl>
+    <dl>
+        <dt>
+            nofollow</dt>
+        <dd>
+            do not follow symlinks</dd>
+    </dl>
+    <dl>
+        <dt>
+            count_bytes</dt>
+        <dd>
+            treat 'count=N' as a byte count (iflag only)</dd>
+    </dl>
+    <dl>
+        <dt>
+            skip_bytes</dt>
+        <dd>
+            treat 'skip=N' as a byte count (iflag only)</dd>
+    </dl>
+    <dl>
+        <dt>
+            seek_bytes</dt>
+        <dd>
+            treat 'seek=N' as a byte count (oflag only)</dd>
+    </dl>
+    <p>
+        Sending a USR1 signal to a running 'dd' process makes it print I/O statistics to standard error and then resume
+        copying.
+    <p>
+        Options are:
+    <dl>
+        <dt>
+            <b>&#45;&#45;help</b>
+        </dt>
+        <dd>
+            display this help and exit</dd>
+    </dl>
+    <dl>
+        <dt>
+            <b>&#45;&#45;version</b>
+        </dt>
+        <dd>
+            output version information and exit</dd>
+    </dl>
+</div>
+<div class="section">
+    <h1>AUTHOR</h1> Written by Paul Rubin, David MacKenzie, and Stuart Kemp.
+</div>
+<div class="section">
+    <h1>REPORTING BUGS</h1> GNU coreutils online help: <a
+        href="https://www.gnu.org/software/coreutils/">&lt;https://www.gnu.org/software/coreutils/&gt;</a>
+    <div style="height: 0.00em;">
+        &#160;</div>
+    Report any translation bugs to <a
+        href="https://translationproject.org/team/">&lt;https://translationproject.org/team/&gt;</a>
+</div>
+<div class="section">
+    <h1>COPYRIGHT</h1> Copyright &#169; 2019 Free Software Foundation, Inc. License GPLv3+: GNU GPL version 3 or later
+    <a href="https://gnu.org/licenses/gpl.html">&lt;https://gnu.org/licenses/gpl.html&gt;</a>.<div
+        style="height: 0.00em;">
+        &#160;</div>
+    This is free software: you are free to change and redistribute it. There is NO WARRANTY, to the extent permitted by
+    law.
+</div>
+<div class="section">
+    <h1>SEE ALSO</h1> Full documentation <a
+        href="https://www.gnu.org/software/coreutils/dd">&lt;https://www.gnu.org/software/coreutils/dd&gt;</a>
+    <div style="height: 0.00em;">
+        &#160;</div>
+    or available locally via: info &#39;(coreutils) dd invocation&#39;
+</div>
+<table summary="Document Footer" class="foot" width="100%">
+    <col width="50%">
+    <col width="50%">
+    <tr>
+        <td class="foot-date">
+            March 2019</td>
+        <td class="foot-os" align="right">
+            GNU coreutils 8.31</td>
+    </tr>
+</table></p>

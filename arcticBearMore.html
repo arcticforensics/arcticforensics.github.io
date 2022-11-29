@@ -1,0 +1,54 @@
+<style>
+	table,
+	th,
+	td {
+		padding: 5px;
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+<p style="font-size: 1em;">
+	The arcticBear desktop is partitioned into four <i>panels</i>.  The two primary partitions list Source and Destination devices, a status panel displaying the write-block state and battery level (if applicable), and a forth panel with content depending on which item in the two lists is actively selected.
+	<br>
+<pre style="font-size: 1em; text-align: center;">
+┌─────────────────────────────────────────────────────────────┐
+│┌─<b>Source</b>──────────────────────┐┌─<b>Information</b>────────────────┐│
+││  sda                        ││                            ││
+││    sda1                     ││                            ││
+││    sda2                     ││                            ││
+││  sdb                        ││                            ││
+││  raida                      ││                            ││
+││    raida1                   ││                            ││
+││  vdc                        ││                            ││
+│└─────────────────────────────┘│                            ││
+│┌─<b>Destination</b>─────────────────┐│                            ││
+││Block Device                 ││                            ││
+││Network Interface            ││                            ││
+││  eth4                       ││                            ││
+││    iSCSI                    ││                            ││
+││    FTP/SSH                  ││                            ││
+││USB Transfer Cable           ││                            ││
+││                             ││                            ││
+│└─────────────────────────────┘│                            ││
+│┌─<b>Status</b>──────────────────────┐│                            ││
+││Write Protect: On   Bat.  99%││                            ││
+│└─────────────────────────────┘└────────────────────────────┘│
+└─────────────────────────────────────────────────────────────┘
+</pre>
+	<h3>Source</h3>
+	The Source lists attached block devices and pseduo block devices such as block device images (including raw and Encase/EWF files), and RAIDs.  Device labels are constructed in the form [type][index]&lt;partition&gt;.<br><br>
+	<table style="margin-left: 2em; margin-right: 2em; height: 1em;">
+	<tbody>
+	<tr><td>sd</td><td>Linux block device</td></tr>
+	<tr><td>ldm</td><td>Microsoft Logical Disk Management (dynamic disks)</td></tr>
+	<tr><td>raid</td><td>Software RAID (e.g. isw, Intel software RAID)</td></tr>
+	<tr><td>vd</td><td>Virtual block device (drive image)</td></tr>
+	<tr><td>sr</td><td>Optical drives</td></tr>
+	</tbody>
+	</table><br>
+	<b>Write-blocking:</b> arcticBear relies on the arcticLinux kernel to provide block device write-blocking.  All attached devices are write-blocked at boot time, and cannot be written to unless detached.  An unattached block device can be made writable by the user and will appear in the Destination list.<br><br>
+	<b>RAID/LDM:</b> Software RAID sets and Microsoft's dynamic disks are identifed and parsed accordingly.  Once a complete set is identifed, and pseudo 'raid' block device is emulated representing the RAID/LDM set.<br><br>
+	<b>WET:</b> Supported transfer cables (USB Host-to-Host) are displyed in the Destinations list when attached and provide a Host/Client paradign with Microsoft Windows based systems running the winterCUB client software (et al.).  All Source block devices are made available to the client system.<br><br>
+	<h3>Desintation</h3>
+	Sink devices such as mountable file systems (Ext, NTFS, FAT, HFS, APFS, etc.) on block devices, network (Ethernet, Wifi), iSCSI and Windows Easy Transfer (WET) cables are listed as Destination devices.
+</p>

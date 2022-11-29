@@ -1,0 +1,22 @@
+       <p style="font-size: 1em;">The ISO
+        images can be 'burnt' to an optical disc using any of a myriad of
+        authoring tools.&nbsp; The raw image files require a software tool
+        capable of writing <i>directly</i> to a block device.  The <i>dd</i> command can be used.&nbsp;
+        For example:</p>
+      <p>Unix-like OS<br><b style="font-family: Courier New;">dd
+          if=arcticLinux_Intel_x86_EFI_1.9.bin of=/dev/sdc bs=1M</b></p>
+      <p>Microsoft Windows<br><b style="font-family: Courier New;">dd
+          if=arcticLinux_Intel_x86_EFI_1.9.bin of=\\.\PhysicalDrive3 bs=1M</b></p>
+      <p>Since the EFI and Hybrid bootable images are based on the GPT schema,
+        it is necessary to make sure a backup of the Partition Table exists at
+        the end of the target medium.  The
+        <i>sgdisk</i> command can be used.  For example:</p>
+      <p>Unix-like OS<br><b style="font-family: Courier New;">sgdisk -e
+          /dev/sdc</b></p>
+      <p>Microsoft Windows<br><b style="font-family: Courier New;">sgdisk -e
+          \\.\PhysicalDrive3</b></p>
+      <p>The Unix-like commands <i>dd</i> and <i>sgdisk</i> are included
+        in Console Tools as Windows ports.  Note that the Microsoft Windows Operating
+        System restricts direct disc writes to block devices containing one or
+        more file systems.&nbsp; As such, the target medium should be 'erased'
+        before writing the image.&nbsp; See <a target="_blank" href="https://www.seagate.com/au/en/support/kb/how-to-diskpart-eraseclean-a-drive-through-the-command-prompt-005929en/">How to Diskpart Erase/Clean a Drive Through the Command Prompt</a> or <a target="_blank" href="https://docs.microsoft.com/en-us/powershell/module/storage/clear-disk?redirectedfrom=MSDN&amp;view=win10-ps">PowerShell Clear-Disk</a>.</p>

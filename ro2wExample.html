@@ -1,0 +1,12 @@
+<p style="font-size: 1em;"><em>Create a writable, pseudo file copy of physical drive 2 on the Desktop</em><br>
+<b style="font-family: Courier New;">ro2w \\.\physicaldrive2<br>
+<br>
+</b><em>Create a writable virtual hard drive of write-protected physical drive 5 on the Desktop</em><br>
+<b style="font-family: Courier New;">raw2VHD \.\physicaldrive5 \Users\user\Desktop\MyVHD<br>
+ro2w </b><b style="font-family: Courier New;">\Users\user\Desktop\MyVHD\physicaldrive2.vhd</b><b
+style="font-family: Courier New;"><br>
+</b><em><br>
+Create a writable virtual hard drive of the contents of a physical drive stored as an EWF (file.ewf) on the Desktop</em><br>
+<b style="font-family: Courier New;">ewf2raw file.ewf \Users\user\Desktop\MyEWF<br>
+raw2VHD </b><b style="font-family: Courier New;"><b style="font-family: Courier New;">\Users\user\Desktop\MyEWF</b>\ewf1 \Users\user\Desktop\MyVHD<br>
+ro2w </b><b style="font-family: Courier New;">\Users\user\Desktop\MyVHD\ewf1.vhd</b></p>
